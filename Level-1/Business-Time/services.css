@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    background: rgb(211, 186, 186);
+}
+h1 {
+    position: relative;
+    padding: .5em;
+    background:linear-gradient(135deg, transparent 50px, green);
+}
+nav {
+    position: relative;
+    background: orange;
+    padding: 10px;
+    text-align: right;
+}
+nav > a {
+    color: black;
+    outline: 2px solid black;
+    text-decoration: none;
+    font-family: inherit;
+    margin: 10px;
+    padding: .25em
+}
+nav > a:hover {
+    cursor: pointer;
+    background: green;
+}
+
+/* -------------------------/|\-
+-----------------------------|--
+navigation bar all above-----|--
+-----------------------------|--
+-----------------------------|-- */
+.form-header {
+    text-align: center;
+    background-color: red;
+    padding: 1em;
+}
+.container {
+    margin: auto;
+    width: 400px;
+    margin-top: 2em;
+    outline: 5px solid black;
+}
+.services-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1em;
+    
+}
+input {
+    height: 30px;
+    border-radius: .5rem;
+    box-shadow: 0 5px 5px 0 orange;
+    text-align: center;
+}
+
+.submit {
+    padding: 20px;
+    margin: .5em;
+    border-radius: 1em;
+    background-color: yellowgreen;
+    font-size: 20px;
+    font-family: inherit;
+}
+label {
+    font-size: 20px;
+}

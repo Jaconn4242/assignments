@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    background: rgb(211, 186, 186);
+}
+h1 {
+    position: relative;
+    padding: .5em;
+    background:linear-gradient(135deg, transparent 50px, green);
+}
+nav {
+    position: relative;
+    background: orange;
+    padding: 10px;
+    text-align: right;
+}
+nav > a {
+    color: black;
+    outline: 2px solid black;
+    text-decoration: none;
+    font-family: inherit;
+    margin: 10px;
+    padding: .25em
+}
+nav > a:hover {
+    cursor: pointer;
+    background: green;
+}
+.pic1 {
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+.container {
+    background: lightgreen;
+    height: 42vh;
+    background: linear-gradient(135deg, transparent 210px, lightgreen 0);
+}
+.quoteButton {
+    position: absolute;
+    top: 1.1em;
+    left: 100em;
+    width: 10em;
+    background-color: red;
+    padding: .7em;
+    border-radius: 2em;
+    box-shadow: 0 3px 8px 0 orange
+}
+h2 {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 24em;
+    left: 2px;
+}
+.green-contents {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    left: 17em;
+    position:absolute;
+    top: 33.5em;
+}
+.jobs {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.pic2 {
+    width: 200px;
+    box-shadow: 10px 5px 0 rgb(173, 158, 158);
+}
+.pic3 {
+    width: 200px;
+    height: 110px;
+    box-shadow: 10px 5px 0 rgb(173, 158, 158);
+}
+.pic4 {
+    width: 200px;
+    height: 110px;
+    box-shadow: 10px 5px 0 rgb(173, 158, 158);
+}
+.pic5 {
+    width: 200px;
+    height: 110px;
+    box-shadow: 10px 5px 0 rgb(173, 158, 158);
+}
+.pic6 {
+    width: 200px;
+    height: 110px;
+    box-shadow: 10px 5px 0 rgb(173, 158, 158);
+}
+.pic2:hover {
+    transform: scale(1.5);
+}
+.pic3:hover {
+    transform: scale(1.5);
+}
+.pic4:hover {
+    transform: scale(1.5);
+}
+.pic5:hover {
+    transform: scale(1.5);
+}
+.pic6:hover {
+    transform: scale(1.5);
+}
+.quoteButton:hover {
+    transform: scale(1.5);
+}
+.experienceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 30px;
+    margin-left: .5em;
+    margin-right: .5em;
+    background-color: rgb(192, 171, 171);
+}
+.starpic {
+    width: 300px;
+    margin-bottom: 5px;
+}
+h3 {
+    text-decoration: underline;
+}
+.description1 {
+    margin-top: 7px;
+    display:inline-block;
+    text-align: center;
+}
+.footer {
+    background: black;
+    color: white;
+    padding-top: 3em;
+    text-align: center;
+    
+}
+
+/*------------------------------
+------------------|-----|-------
+ Mobile Design----|-----|-------
+ -----------------|-----|-------
+ -----------------V-----V------- */
+@media only screen and (max-width: 414px) {
+    
+    .container {
+        background: lightgreen;
+        height: 42vh;
+        width: 40px;
+        opacity: 0;
+        /* out */
+        /* background: linear-gradient(135deg, transparent 100px, lightgreen 0); */
+    }
+    h2 {  
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 28em;                   
+        left: 1px;
+        font-size: 20px;
+        opacity: 0;
+        /* out */
+    }
+    .quoteButton {
+        position: absolute;
+        top: .6em;
+        left: 19em;
+        width: 9em;
+        background: blue;
+        padding: .7em;
+        border-radius: 2em;
+        box-shadow: 0 3px 8px 0 orange;
+        /* why cant I get this to show on mobile? */
+    }
+    .green-contents {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 20px;
+        left: 20px;
+        width: 400px;
+        height: 200px;
+        top: 30em;
+    }
+    .jobs {
+   
+        width: 100px;
+        height: 100px;;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: underline;
+        
+    }
+    .pic2 {
+        width: 100px;
+        box-shadow: 10px 5px 0 rgb(173, 158, 158);
+    }
+    .pic3 {
+        width: 100px;
+        height: 60px;
+        box-shadow: 10px 5px 0 rgb(173, 158, 158);
+    }
+    .pic4 {
+        width: 100px;
+        height: 60px;
+        box-shadow: 10px 5px 0 rgb(173, 158, 158);
+    }
+    .pic5 {
+        width: 100px;
+        height: 60px;
+        box-shadow: 10px 5px 0 rgb(173, 158, 158);
+    }
+    .pic6 {
+        width: 100px;
+        height: 60px;
+        box-shadow: 10px 5px 0 rgb(173, 158, 158);
+    }
+    .pic2:hover {
+        transform: scale(1.5);
+    }
+    .pic3:hover {
+        transform: scale(1.5);
+    }
+    .pic4:hover {
+        transform: scale(1.5);
+    }
+    .pic5:hover {
+        transform: scale(1.5);
+    }
+    .pic6:hover {
+        transform: scale(1.5);
+    }
+}

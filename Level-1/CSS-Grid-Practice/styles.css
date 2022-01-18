@@ -1,0 +1,202 @@
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 35px);
+    grid-gap: 8px;
+}
+
+#box1 {
+    background-color: red;
+    grid-column: 1 / 3;
+    border-radius: .5em;
+}
+#box2 {
+    background-color: blue;
+    grid-column: 3 /5;
+    border-radius: .5em;
+}
+#box3 {
+    background-color: green;
+    border-radius: .5em;
+}
+#box4 {
+    background-color: purple;
+    grid-column: 2 /5;
+    border-radius: .5em;
+}
+#box5 {
+    background-color: yellow;
+    grid-column: 1 / 5;
+    border-radius: .5em;
+}
+/* --------------Next Example Below--------------- */
+hr {
+    border: 2px solid black;
+    background-color: black;
+    margin: 1em
+}
+/* -----------------Below-------------------------- */
+
+#grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 120px);
+    grid-gap: 10px
+}
+#box6 {
+    background-color: red;
+    grid-column: 1 / 4;
+    border-radius: .5em;
+}
+#box7 {
+    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    border-radius: .5em;
+}
+#box8 {
+    background-color: green;
+    grid-column: 2 / 4;
+    border-radius: .5em;
+}
+#box9 {
+    background-color: purple;
+    grid-column: 3 / 4;
+    border-radius: .5em;
+}
+#box10 {
+    background-color: purple;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    border-radius: .5em;
+}
+/* -----------Next Example Below-------------- */
+
+/* Mobile-View Below */
+@media only screen and (max-width: 414px) {
+#grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 100px 50px 50px;
+    grid-gap: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 23px;
+}
+#box11 {
+    background-color: grey;
+    border-radius: .5em;
+    color: white;
+}
+#box12 {
+    background-color: rgb(51, 47, 47);
+    border-radius: .5em;
+    color: white;
+}
+#box13 {
+    background-color: rgb(51, 47, 47);
+    border-radius: .5em;
+    color: white;
+}
+#box14 {
+    background-color: rgb(199, 192, 192);
+    border-radius: .5em;
+    color: black;
+}
+#box15 {
+    background-color: grey;
+    border-radius: .5em;
+    color: white;
+}
+}
+
+/* Tablet-View Below */
+@media only screen and (min-width: 414px) {
+    #grid-container2 {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 50px 160px 50px 50px 50px;
+        grid-gap: 20px;
+        text-align: center;
+        justify-content: center;
+        font-size: 23px;
+    }
+    #box11 {
+        background-color: grey;
+        border-radius: .5em;
+        color: white;
+        grid-column: 1 / 3;
+    }
+    #box12 {
+        background-color: rgb(51, 47, 47);
+        border-radius: .5em;
+        grid-column: 1 / 2;
+        color: white;
+    }
+    #box13 {
+        background-color: rgb(51, 47, 47);
+        border-radius: .5em;
+        color: white;
+        grid-column: 2 / 3;
+    }
+    #box14 {
+        background-color: rgb(199, 192, 192);
+        border-radius: .5em;
+        color: black;
+        grid-column: 1 / 3;
+    }
+    #box15 {
+        background-color: grey;
+        border-radius: .5em;
+        color: white;
+        grid-column: 1 / 3;
+    }
+}
+
+/* PC-View Below */
+@media only screen and (min-width: 820px) {
+    #grid-container2 {
+        display: grid;
+        grid-template-columns: 150px, 1fr, 150px;
+        /* my last 150 isn't working here for GTColumns */
+        grid-template-rows: 50px 160px 50px 50px;
+        grid-gap: 20px;
+        text-align: center;
+        justify-content: center;
+        font-size: 23px;
+    }
+    #box11 {
+        background-color: grey;
+        border-radius: .5em;
+        color: white;
+        grid-column: 1 / 4;
+    }
+    #box12 {
+        background-color: rgb(51, 47, 47);
+        border-radius: .5em;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        color: white;
+    }
+    #box13 {
+        background-color: rgb(51, 47, 47);
+        border-radius: .5em;
+        color: white;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    #box14 {
+        background-color: rgb(199, 192, 192);
+        border-radius: .5em;
+        color: black;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    #box15 {
+        background-color: grey;
+        border-radius: .5em;
+        color: white;
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+}

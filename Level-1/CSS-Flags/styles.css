@@ -1,0 +1,286 @@
+.france {
+    display:inline-flex;
+    outline: 1px solid black
+}
+.color-one {
+    background: #002495;
+    height: 200px;
+    width: 100px;
+}
+.color-two {
+    background-color: #FFFFFF;
+    height: 200px;
+    width: 100px;
+}
+.color-three {
+    background-color: #ED2938;
+    height: 200px;
+    width: 100px;
+}
+
+.germany {
+    display: inline-block;
+    outline: 1px solid black;
+}
+.g1 {
+    background: #000000;
+    height: 66.67px;
+    width: 333.33px;
+}
+.g2 {
+    background-color: #DE0002;
+    height: 66.67px;
+    width: 333.33px;
+}
+.g3 {
+    background-color: #FFCE00;
+    height: 66.67px;
+    width: 333.33px;
+}
+/* MADAGASCAR FLAG:
+I'm unsure about the 6 boxes here.
+I would've liked to only use 3 boxes. The
+first white box and then red and green 
+columns beside it but I couldn't figure 
+out how to do that without using
+the POSITION property so I flexed a row
+of three and then another row of 3 right 
+under it(still thoughtful haha). */
+.madagascar {
+    display: flex;
+    width: 334px;
+    height: 100px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.m1 {
+    background: #FFFFFF;
+    height: 100px;
+    width: 111.1px;
+}
+.m2 {
+    background-color: #FC3E32;
+    height: 100px;
+    width: 111px; 
+    
+}
+.m3 {
+    background-color: #FC3E32 ;
+    height: 100px;
+    width: 111px;
+}
+.madagascar1 {
+    display: flex;
+    width: 334px;
+    height: 100px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.m4 {
+    background: #FFFFFF;
+    height: 100px;
+    width: 111.1px;
+}
+.m5 {
+    background-color: #007E39;
+    height: 100px;
+    width: 111px; 
+}
+.m6 {
+    background-color: #007E39 ;
+    height: 100px;
+    width: 111px;
+}
+/* 224 total height and width - Switz 
+70px for 7
+60px for 6*/
+.s1 {
+    background: #FF0002;
+    height: 60px;
+    width: 320px;
+} 
+.switzline2 {
+    display:flex;
+}
+.s2 {
+    background: #FF0002;
+    height: 70px;
+    width: 130px;
+} 
+.s3 {
+    background: #FFFFFF;
+    height: 70px;
+    width: 60px;
+}
+.s4 {
+    background: #FF0002;
+    height: 70px;
+    width: 130px;
+}
+.switzline3 {
+    Display: flex;
+}
+.s5 {
+    background: #FF0002;
+    height:60px;
+    width:60px;
+}
+.s6 {
+    background: #FFFFFF;
+    height: 60px;
+    width:200px;
+}
+.s7 {
+    Background: #FF0002;
+    height: 60px;
+    width: 60px;
+}
+.switzline4 {
+    display: flex;
+}
+
+    .s8 {
+        background: #FF0002;
+        height: 70px;
+        width: 130px;
+    } 
+    .s9 {
+        background: #FFFFFF;
+        height: 70px;
+        width: 60px;
+    }
+    .s10 {
+        background: #FF0002;
+        height: 70px;
+        width: 130px;
+    }
+.switzline5 {
+    display: flex;
+}
+    .s11 {
+        background: #FF0002;
+        height: 60px;
+        width: 320px;
+    } 
+.Sborder {
+    display: inline-block;
+    outline: 1px solid black
+}
+
+/* Sweden height:200, width:320*/ 
+.sweden {
+    outline: 1px solid black;
+    display: inline-block
+}
+.swedenline1 {
+    display: flex;
+}
+.sw1 {
+    background: #0269A6;
+    height:80px;
+    width: 80px
+}
+.sw2 {
+    background:#FECC00;
+    height: 80px;
+    width: 40px;
+}
+.sw3 {
+    background: #0269A6;
+    height:80;
+    width: 200px
+}
+.swedenline2 {
+    display: inline;
+    outline: 2px solid black;
+}
+.sw4 {
+    background: #FECC00;
+    height: 40px;
+    width: 320px
+}
+.swedenline3 {
+    display: flex;
+}
+.sw5 {
+    background: #0269A6;
+    height:80px;
+    width: 80px
+}
+.sw6 {
+    background:#FECC00;
+    height: 80px;
+    width: 40px;
+}
+.sw7 {
+    background: #0269A6;
+    height:80px;
+    width: 200px
+}
+
+.Gambia {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 66px 10px 44px 10px 66px;
+}
+.red {
+    background-color: #CE1127;
+}
+.white1 {
+    background-color: #FFFFFF;
+}
+.blue {
+    background-color: #0D1D8B;
+}
+.white2 {
+    background-color: #FFFFFF;
+}
+.green {
+    background-color: #3B7827;
+}
+
+.Jwhite {
+    width: 300px;
+    background-color: #FFFFFF;
+    height: 200px;
+    overflow: hidden;
+    outline: 1px solid black
+}
+.Jred {
+    background-color: #BC022C;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 84px;
+    margin-top: 34px
+}
+
+.Niger {
+    display: flex;
+    flex-direction: column;
+}
+.Norange {
+    height: 66.66px;
+    width: 233px;
+    background-color: #E15307;
+}
+.Nwhite {
+    height: 66.66px;
+    width: 233px;
+    background-color: #FFFFFF;
+}
+.Ncircle {
+    width: 60px;
+    height: 60px;
+    background-color: #E15307;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 89px;
+}
+.Ngreen {
+    height: 66.66px;
+    width: 233px;
+    background-color: #10AF2A;
+}

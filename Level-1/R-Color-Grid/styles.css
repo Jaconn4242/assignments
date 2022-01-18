@@ -1,0 +1,45 @@
+.border-box1 {
+    background: white;
+    height: 20vh;
+    display: flex;
+}
+.mainrow {
+    background: #F5C6D6;
+    width: 100%;
+    margin: .7em
+}
+.border-box2 {
+    background: white;
+    height: 20vh;
+    display: flex;
+}
+.row {
+    background: #EE2E84;
+    margin: .7em;
+    width: 25%;
+}
+.border-box3 {
+    background: white;
+    height: 20vh;
+    display: flex;
+}
+.row1 {
+    background: #85CFD8;
+    width: 50%;
+    margin: .7em
+}
+.border-box4 {
+    background: white;
+    height: 20vh;
+    display: flex;
+}
+.row2 {
+    background: #8DC63F;
+    width: 75%;
+    margin: .7em
+}
+.row3 {
+    background: #E76E34;
+    width: 25%;
+    margin: .7em
+}
