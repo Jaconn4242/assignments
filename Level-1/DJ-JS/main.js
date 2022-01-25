@@ -19,17 +19,23 @@ header.style.justifyContent = "center"
 header.style.backgroundColor = "black"
 header.style.color = "yellow"
 header.style.paddingTop = "10px"
+
 var blueBox = document.getElementById("blue-box");
 blueBox.style.border = "2px solid black"
 blueBox.style.height = "100px"
+
 var redBox = document.getElementById("red-box");
 redBox.style.border = "2px solid black"
+
 var yellowBox = document.getElementById("yellow-box");
 yellowBox.style.border = "2px solid black"
+
 var greenBox = document.getElementById("green-box");
 greenBox.style.border = "2px solid black"
+
 var orangeBox = document.getElementById("orange-box");
 orangeBox.style.border = "2px solid black"
+
 var scrollSentence = document.getElementById("scroll-sentence");
 scrollSentence.style.textAlign = "center"
 scrollSentence.style.marginTop = "30em"
@@ -41,6 +47,7 @@ instructions.style.border = "2px solid yellow"
 instructions.style.backgroundColor = "grey"
 instructions.style.fontWeight = "bold"
 // ---event listeners below---
+
 
 blueBox.addEventListener("mouseenter", () => 
     blueBox.style.backgroundColor = "blue"
@@ -72,9 +79,9 @@ greenBox.addEventListener("mouseenter", () =>
 orangeBox.addEventListener("mouseenter", () => 
     orangeBox.style.backgroundColor = "lightgrey"
 )
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => 
     orangeBox.style.backgroundColor = "orange"
-})
+)
 // ---keypress function below---
 
 window.addEventListener("keydown", whatKey,);
