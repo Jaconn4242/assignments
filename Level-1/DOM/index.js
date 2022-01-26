@@ -1,12 +1,10 @@
 const colors = ["red", "blue", "green"]
 
 var button = document.getElementById("add")
-button.addEventListener("click", () => {
+button.addEventListener("click", (e) => {
     const subItem = createSubItem(e)
     document.getElementById("list").appendChild(subItem)
-    
 })
-console.log(button)
 
 function createDropDown(){
     const dropDown = document.createElement("select")
@@ -19,6 +17,7 @@ function createDropDown(){
     dropDown.addEventListener("onchange", function(e){
         e.target.parent.backgroundColor = e.target.value
     })
+    
     return dropDown
 }
 
