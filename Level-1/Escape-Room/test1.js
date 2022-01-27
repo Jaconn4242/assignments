@@ -1,5 +1,5 @@
 var readline = require("readline-sync");
-// ----------All functions are above---------------
+
 let key = 0;
 while(true){
 
