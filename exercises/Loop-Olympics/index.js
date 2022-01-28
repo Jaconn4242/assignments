@@ -43,6 +43,7 @@
 // } 
 // console.log(everyOther(fruit))
 
+// Write a loop that will print out all the names of the people of the people array
 const peopleArray = [
     {
       name: "Harrison Ford",
@@ -62,11 +63,14 @@ const peopleArray = [
     }
   ]
 
-for(let i = 0; i < peopleArray.length; i++){
-    for(let j = 0; i < peopleArray[i].length; i++){
-        
-        console.log(peopleArray[i][j])
+  
+function hello(arr){
+  let names = []
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; i < arr.length; i++){
+      names.push(arr[i].name)
     }
+  }
+  return names
 }
-
-
+console.log(hello(peopleArray))
