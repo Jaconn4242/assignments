@@ -49,12 +49,23 @@
 
 // Write a function that takes a string as a parameter and capitalizes any character that follows a space.
 
-const capitlizeFirstLetter = (str) => {
-    let splitstr = str.toLowerCase().split(" ");
-    for(i = 0; i < splitstr.length; i++){
-        splitstr[i] = splitstr[i].charAt(0).toUpperCase() + splitstr[i].slice(1);
-    }
-    return splitstr.join(" ");
+// const capitlizeFirstLetter = (str) => {
+//     let splitstr = str.toLowerCase().split(" ");
+//     for(i = 0; i < splitstr.length; i++){
+//         splitstr[i] = splitstr[i].charAt(0).toUpperCase() + splitstr[i].slice(1);
+//     }
+//     return splitstr.join(" ");
+// }
+
+// console.log(capitlizeFirstLetter("I really hope that this works"))
+
+function Car(make, model, year){
+    this.make = make
+    this.model = model
+    this.year = year
 }
 
-console.log(capitlizeFirstLetter("I really hope that this works"))
+
+var jeep = new Car("Jeep", "Cherokee", 1995)
+
+console.log(jeep)
