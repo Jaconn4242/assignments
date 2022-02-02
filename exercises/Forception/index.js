@@ -1,5 +1,5 @@
-var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
-var alphabet = "abcdefghijklmnopqrstuvwxyz"
+const people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 // function forception(people, alphabet){
