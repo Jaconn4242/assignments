@@ -21,15 +21,15 @@ let operator = ["add", "sub", "mul", "div"]
 let index = readline.keyInSelect(operator, "what operation would you like to perform")
 
 
+choice()
 function choice(){
     if(operator[index] === "add"){
         console.log("the sum is " + add(num1, num2));
-    } if(operator[index] === "sub"){
+    } else if(operator[index] === "sub"){
         console.log("the remainder is " + sub(num1, num2));
-    } if(operator[index] === "mul"){
-        console.log("the product is " + mul(num1, num2));
-    } if(operator[index] === "div"){
-        console.log("the quotient is " +div(num1, num2));
+    } else if(operator[index] === "mul"){
+        console.log("the product is " + multiplies(num1, num2));
+    } else if(operator[index] === "div"){
+        console.log("the quotient is " + divides(num1, num2));
     }
 }
-choice()

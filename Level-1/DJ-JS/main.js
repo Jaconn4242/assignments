@@ -79,9 +79,9 @@ greenBox.addEventListener("mouseenter", () =>
 orangeBox.addEventListener("mouseenter", () => 
     orangeBox.style.backgroundColor = "lightgrey"
 )
-window.addEventListener("scroll", () => 
+orangeBox.addEventListener("onscroll", function () { 
     orangeBox.style.backgroundColor = "orange"
-)
+})
 // ---keypress function below---
 
 window.addEventListener("keydown", whatKey,);
