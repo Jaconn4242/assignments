@@ -7,24 +7,24 @@ let instructions = readline.question("Hello " + userName + ", you have been prov
 let user = {
     name: userName,
     hp: 50,
-    damage: Math.floor(Math.random() * 4)
+    damage: Math.floor(Math.random() * 8)
 }
 // Below is a collection of the 3 different enemies along with their properties/stats.
 let enemies = [
     {
         name: "Headless Man",
         hp: 30,
-        damage: Math.floor(Math.random() * 3)
+        damage: Math.floor(Math.random() * 11)
     },
     {
         name: "Zombie Ex-girlfriend",
         hp: 20,
-        damage: Math.floor(Math.random() * 4)
+        damage: Math.floor(Math.random() * 10)
     },
     {
         name: "Rabid Dog",
         hp: 10,
-        damage: Math.floor(Math.random() * 5)
+        damage: Math.floor(Math.random() * 8)
     }
 ]
 
@@ -68,10 +68,10 @@ function Intro(){
 let game = true;
 while(game) {
     
-    
+    let command = readline.keyIn(["W to walk", "P to check backpack items", "E to exit game"])
+
     let keepGoing = true
     while(keepGoing){
-        let command = readline.keyIn(["W to walk", "P to check backpack items", "E to exit game"])
         if(command === "w"){
             attackChance()
             let command = readline.keyIn("W\ to walk -  P\ to check backpack items -  E\ to Exit")
@@ -112,46 +112,68 @@ function attackChance (){
             
         }
     }
+
+
  
 // this is where the user enters into the fight or runs away, inflicts damage and shows results if they fight.
 function theFight(enemy){
-    while(user.hp > 0 && enemy.hp > 0){
-        console.log("enemy HP", enemy.hp)
-        console.log("user health", user.hp)
+    while(user.hp > 0 && enemy.hp > 0 || user.hp <= 0){
+        console.log("Enemy HP", enemy.hp)
+        console.log("Your HP", user.hp)
         let fightOrRun = readline.keyIn("n\ 1. fight back n\ 2. run-away");
-        if(fightOrRun = "1" ){
+        if(fightOrRun === "1" ){
             readline.keyInPause("you strike the " + enemy.name)
             enemy.hp -= user.damage
-            console.log("enemy HP", enemy.hp)
-            console.log("user health", user.hp)
+            console.log("Enemy HP", enemy.hp)
+            console.log("Your HP", user.hp)
                 if(enemy.hp <= 0){
-                    console.log("you have defeated ", + enemy.name)
+                    console.log(`you have defeated ${enemy.name} and you have acquired a knife!`)
+                    readline.keyInPause("Great Job, lets keep walking!")
+                    inventory.push(weapons[1])
                     attackChance()
-                }   else {
+                } else if(user.hp <= 0){
+                    console.log("you have been defeated and " + enemy.name + " stole your backpack");
+                    gameOver()
+                } else  {
                     readline.keyInPause(enemy.name + " attacks back")
                     user.hp = user.hp - enemy.damage
-                }
-        }  else {
-            function fifty(){
-                let fiftyPercent = [`The enemy has struck you as you ran away ${randomNum1 = Math.floor(Math.random() * 2)}` + process.exit(), process.exit()]
-                let randomNum1 = Math.floor(Math.random() * 2);
-                let randomChance = fiftyPercent[randomNum1];
+                }    
+        }if(fightOrRun === "2"){
+            let randomNumber = Math.floor(Math.random() * 2)
+            if(randomNumber === "1"){
+                console.log("you managed to run away safely")
+            } else {
+                console.log("you were barely scratched on your way out!")
+                user.hp = user.hp - enemy.damage
+                console.log("Your HP", user.hp)
                 
-                if(randomChance = fiftyPercent[0]){
-                    user.hp = enemies[0].damage - user.hp 
-                    keepGoing = false
-                    process.exit()
-                }  
-                readline.keyInYN(fifty())
             }
         }
+
     }
 }
+    
     
 function gameOver(){
     console.log("game over")
     process.exit()
 }
+
+
+
+
+
+    // readline.keyInYN(fifty())
+
+    // function fifty(){
+//     let fiftyPercent = [`The enemy has struck you as you ran away ${randomNum1 = Math.floor(Math.random() * 2)}` + process.exit(), process.exit()]
+//     let randomNum1 = Math.floor(Math.random() * 2);
+//     let randomChance = fiftyPercent[randomNum1];
+    
+//     if(randomChance = fiftyPercent[0]){
+//         user.hp = enemies[0].damage - user.hp 
+//         keepGoing = false
+//         process.exit()
 // user encounters the random enemy
 // function meetEnemy(){
 // readline.keyInPause("You have encountered a " + randomEnemy().name + "!")

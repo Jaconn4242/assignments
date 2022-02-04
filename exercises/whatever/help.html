@@ -8,25 +8,25 @@
     <title>DOM Olympics</title>
 </head>
 <body>
-    <header id="header">This header exists in Html, i used it to append the h1 below</header>
+    <header id="header"></header>
     <label>Theme</label>
     <select id="theme-drop-down">
         <option value="theme-one">blue/brown</option>
         <option value="theme-two">red/black</option>
     </select>
     <div id="main">
-        <button id='clear-button'>clear</button>
-        <div class="messages">
-            <div class="message left">
+        <button id='clearButton'>clear</button>
+        <div class="messages" id="messages">
+            <div class="message left" id="left1">
                 I have something serious to talk about
             </div>
-            <div class="message right">
+            <div class="message right" id="right1">
                 I don't want to talk
             </div>
-            <div class="message left">
+            <div class="message left" id="left2">
                 You have to, you're the police
             </div>
-            <div class="message right">
+            <div class="message right" id="right2">
                 I'm just a simple farmer
             </div>
         </div>
@@ -35,7 +35,6 @@
             <button>Send</button>
         </form>
     </div>
-   
 </body>
 <script src="index.js"></script>
 </html>

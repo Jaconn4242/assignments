@@ -1,9 +1,15 @@
-var myHeader = document.getElementById("header")
-myHeader.style.color = "blue"
+let header = document.getElementById("header").textContent = "JavaScript Made This!!";
 
-var newHeader = document.createElement("h1")
-newHeader.textContent = "Java Script Did this!!!"
-myHeader.append(newHeader)
+let codeRed = document.getElementById("clearButton");
+
+let messages = document.querySelector(".messages");
+
+codeRed.addEventListener("click", () => {
+    
+    messages.remove()
+})
+
+
 
 
 
