@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://www.notion.so/image/https%3A%2F%2Fcoursework.vschool.io%2Fcontent%2Fimages%2Fsize%2Fw2000%2F2016%2F08%2F6359033294930248691178153861_airplane.jpg?table=block&id=06c0ee2c-4480-4b23-a6b4-b0dfb39f2668&spaceId=6aef2f33-de49-4357-824c-927199bca931&width=2000&userId=70e890cf-df51-419c-986b-8239da0ce9bd&cache=v2");
+}
+h1 {
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#myForm {
+    background-color: lightblue;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    padding: 5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    outline: 4px solid blue;
+    box-shadow: 0 5px 30px 0 blue;
+    border-radius: .5em;
+}
+#submitBtn {
+    padding: .75em;
+    border-radius: 1em;
+    font-size: 15px;
+}
