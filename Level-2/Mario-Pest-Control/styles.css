@@ -1,0 +1,100 @@
+/* mobile first ---------------------------
+------------------------------------------
+----------------------------------------- */
+body {
+    background-color: lightgreen;
+    margin: 0
+}
+h1 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.myForm {
+    width: 100%;
+}
+.box1 {
+    background-color: lightgrey;
+    outline: 2px solid red;
+    padding: 1.3em;
+    margin: 10px;
+    border-radius: 2em;
+    text-align: right;
+}
+.box2 {
+    background-color: lightgrey;
+    outline: 2px solid red;
+    padding: 1.3em;
+    margin: 10px;
+    border-radius: 2em;
+    text-align: right;
+}
+.box3 {
+    background-color: lightgrey;
+    outline: 2px solid red;
+    padding: 1.3em;
+    margin: 10px;
+    border-radius: 2em;
+    text-align: right;
+}
+.resultBox {
+    background-color: rgb(169, 173, 171);
+    outline: 5px solid rgb(54, 46, 46);
+    padding: .5em;
+    margin: auto;
+    margin-top: 2.5em;
+    text-align: center;
+    width: fit-content
+}
+input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    outline: 2px solid black;
+}
+p {
+    text-align: left;
+    padding: .25em;
+    width: fit-content;
+    background-color: yellow;
+    font-weight: bold;
+}
+#goomba{
+    width: 50px;
+    float: left;
+    margin-left: 2em;
+}
+#bomb{
+    width: 80px;
+    float: left;
+    margin-left: 1.7em;
+}
+#cheep {
+    width: 80px;
+    height: 60px;
+    float: left;
+    margin-left: 2em;
+}
+label {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 17px;
+}
+footer {
+    color: white;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    margin-top: 1em;
+}
+#site {
+    color: blue
+}
+button {
+    font-weight: bold;
+    cursor: pointer;
+}
