@@ -5,7 +5,6 @@ myForm.addEventListener("submit",(e) =>{
     let goombas = myForm.goombas.value
     let bombs = myForm.bobOmbs.value
     let cheeps = myForm.cheepCheeps.value
-   
     let result = myForm.result.value
 
     function sum(x, y, z){
