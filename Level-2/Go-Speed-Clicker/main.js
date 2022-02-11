@@ -4,6 +4,8 @@ const decreaseBtn = document.getElementById("decrease")
 const increaseBtn = document.getElementById("increase")
 const resultInput = document.getElementById("resultInput")
 let counter = document.getElementById("counter")
+const winner = document.getElementById("winner")
+const number200 = document.getElementById("number200")
 
 resultInput.value = `${JSON.parse(localStorage.getItem("seconds"))} seconds ${JSON.parse(localStorage.getItem("count"))} clicks`
 
@@ -34,9 +36,12 @@ increaseBtn.addEventListener("click", ()=> {
     localStorage.setItem("seconds", seconds)
     console.log(JSON.parse(localStorage.getItem("count")))
     
-    if(count >= 150 && seconds > 0){
+    if(count >= 20 && seconds > 0){
         resultInput.value = `${JSON.parse(localStorage.getItem("seconds"))} seconds ${JSON.parse(localStorage.getItem("count"))} clicks`
         disablebtns()
+        winner.textContent = "Winner!!!"
+        number200.style.color = "green"
+        number200.style.fontSize = "50px"
         stop()
     }   
 
@@ -50,6 +55,11 @@ function disablebtns(){
     increaseBtn.disabled = true
     decreaseBtn.disabled = true
 }
+
+decreaseBtn.addEventListener("click", () => {
+    count--
+    counter.textContent = count
+})
 
 
 

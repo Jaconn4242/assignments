@@ -75,3 +75,14 @@ body {
 fieldset{
     border: 2px solid black; 
 }
+#winner {
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: green;
+    letter-spacing: 2px;
+    animation: blink 2s ease infinite; 
+ }
+#number200 {
+    color: red;
+}
