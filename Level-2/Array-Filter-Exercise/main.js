@@ -8,6 +8,16 @@
 
 // console.log(result)
 
+// IN A FUNCTION BELOW -----
+
+// function fiveOrGreater(arr){
+//     let result = arr.filter(num => num > 5)
+       
+//     return result
+// }
+// console.log(fiveOrGreater(numbers))
+
+
 
 
 
@@ -17,6 +27,14 @@
 // const result = numbers.filter(num => num % 2 ===0)
 
 // console.log(result)
+
+// SEE IT IN A FUNCTION BELOW------------------------------------
+
+// function onlyEven(arr) {
+//     let result = arr.filter(num => num % 2 === 0)
+//     return result
+// }
+// console.log(onlyEven(numbers))
 
 
 
@@ -28,6 +46,14 @@
 
 // console.log(result)
 
+// SEE IT IN A FUNCTION BELOW -------------------------
+
+// function stringsAgain(arr){
+//     let result = arr.filter(item => item.length <= 5)
+//     return result
+// }
+
+// console.log(stringsAgain(strings))
 
 
 
@@ -46,6 +72,16 @@
 
 // console.log(peopleWhoBelong)
 
+// SEE IT IN A FUNCTION BELOW --------------------------------
+
+// function DoOrDontBelong(arr){
+//     let result = arr.filter(dontBelong => {
+//         if(!dontBelong.member)
+//         return dontBelong 
+//     })
+//     return result
+// }
+// console.log(DoOrDontBelong(people))
 
 
 
@@ -60,10 +96,23 @@ const matrixMaybes = [
     { name: "Bob Ziroll", age: 100 }
 ]
 
-const over18 = matrixMaybes.filter(yes => yes.age > 18)
+// const over18 = matrixMaybes.filter(yes => yes.age > 18)
 
-console.log(over18)
+// console.log(over18)
 
+// SEE IT IN A FUNCTION BELOW -------------------------------
+// filter is only allowing me to filter through the array, Not make changes to the array.  Hense below the console.log is not returning Is Old enough
+
+function oldEnough(arr){
+     let result = arr.filter(person => {
+         if(person.age > 18){
+             return person + "is old enough"
+         } 
+     })
+     return result
+}
+
+console.log(oldEnough(matrixMaybes))
 
 
 
