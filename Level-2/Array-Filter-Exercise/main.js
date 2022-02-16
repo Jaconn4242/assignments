@@ -106,7 +106,7 @@ const matrixMaybes = [
 function oldEnough(arr){
      let result = arr.filter(person => {
          if(person.age > 18){
-             return person + "is old enough"
+             return person 
          } 
      })
      return result

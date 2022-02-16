@@ -17,7 +17,7 @@
 //      let result = arr.reduce((final, num) => {
 //         final += num
 //         return final
-//     }, [])
+//     }, "")
 //     return result
 // }
 
@@ -118,7 +118,7 @@
 
 // function flatten(arr){
 //     let result = arr.reduce((final, single) => {
-//         final = final + single
+//         final = final.concat(single)
 //         return final
 //     })
 //     return result

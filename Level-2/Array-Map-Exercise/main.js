@@ -54,9 +54,9 @@
 // console.log(result)
 
 // function capitalizeFirstLetters(arr){
-//     let result = arr.map(letter => {
-//         letter = letter[0].toUpperCase() + letter.slice(1).toLowerCase()
-//         return letter
+//     let result = arr.map(name => {
+//         name = name[0].toUpperCase() + name.slice(1).toLowerCase()
+//         return name
 //     })
 //     return result
 // }
