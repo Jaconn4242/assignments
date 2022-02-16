@@ -1,0 +1,119 @@
+body {
+    background: rgb(174, 175, 172)
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+p{
+    text-align: center;
+}
+.boxes {
+   display:flex;
+   border: 2px solid black;
+   padding: 2em;
+   margin: auto;
+   width: fit-content;
+   gap: 1em; 
+}
+
+.box1 {
+    border: 2px solid orange;
+    height: 90px;
+    width: 90px;
+    transition: background-color 500ms linear 500ms, border-radius 500ms linear 500ms
+}
+.box1:hover {
+    background-color: grey;
+    border-radius: 50%;
+}
+.box2 {
+    border: 2px solid green;
+    height: 90px;
+    width: 90px;
+    transition: width 500ms linear 500ms, height 1s ease-in 1s
+}
+.box2:hover{
+   width: 200px;
+   height: 400px;
+}
+.smiley {
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    transition: width 500ms linear 500ms, margin-top 3.5s ease-in 2.2s 
+}
+.smiley:hover{
+    opacity: 1;
+    width: 200px;
+    margin-top: 19em;
+}
+.box3 {
+    border: 2px solid firebrick;
+    height: 90px;
+    width: 90px;
+    transition: transform 700ms ease-in 300ms
+}
+.box3:hover{
+   transform:rotate(45deg)
+   
+}
+.tilt {
+    font-size: 22px;
+    color: firebrick;
+    height: inherit;
+    opacity: 0;
+    transition: opacity 800ms ease-in 800ms
+    
+}
+.tilt:hover {
+    opacity: 1
+}
+.box4 {
+    border: 2px solid blue;
+    height: 90px;
+    width: 90px;
+    transition: transform 1800ms ease-in 1800ms, width 1800ms ease-in 1800ms, height 1800ms ease-in 1800ms
+}
+.box4:hover {
+    transform: skewY(25deg);
+    width: 200px;
+    height: 200px
+}
+.lean {
+    font-size: 32px;
+    color: blue;
+    height: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0;
+    transition: opacity 1500ms ease-in 1500ms
+}
+.lean:hover {
+    opacity: 1
+}
+.box5 {
+    border: 2px solid yellow;
+    height: 90px;
+    width: 90px;
+    transition: transform 500ms ease-in 500ms, box-shadow 1s linear 1s
+}
+.box5:hover{
+    transform: translatey(25px);
+    box-shadow: 0 8px 20px 0 red
+    
+    
+}
+.box6 {
+    border: 2px solid lime;
+    height: 90px;
+    width: 90px;
+    transition: transform 500ms linear 500ms, width 1000ms ease-in 1000ms, height 1000ms ease-in 1000ms, background-color 1000ms ease-in 1000ms, outline 1500ms ease-in 1500ms
+}
+.box6:hover {
+    transform: scale(1.5);
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+    outline: 46px solid lime
+}
