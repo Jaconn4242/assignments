@@ -6,9 +6,9 @@ body, html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, auto);
-   
 }
 .header{
+    display: flex;
     background-image: url(http://csszengarden.com/214/koi.jpg);
     height: 200px;
     padding: .5em;
@@ -24,18 +24,18 @@ body, html {
 }
 .h1{
     color: #FFFFFF;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Libre Baskerville', sans-serif;
     font-weight: lighter;
     font-size: 50px;
 }
 .h2{
     color: #FFFFFF;
-    font-family: 'Julius Sans One';
+    font-family: 'Libre Baskerville', sans-serif;
     font-weight: lighter;
     font-size: 30px;
 }
 .header-picture{
-    position: absolute;
+    /* position: absolute; */
     top: 2em;
     left: 8em;
     width: 140px;
@@ -53,15 +53,18 @@ body, html {
     opacity: 30%;
     width: 65%;
     margin-top: 5em;
+    
 }
 .arrow{
     width: 10%;
     height: 70px;
     opacity: 30%;
     margin-top: 5em;
+    
 }
 button:hover , .arrow:hover {
     opacity: 50%;
+    
 }
 h3{
     color: #325050;
@@ -219,7 +222,6 @@ a:hover{
         height: 200px;
         padding: .5em;
         grid-column:  1 / 4;
-        
     }
     .header-wrapper{
         display: flex;
@@ -230,18 +232,18 @@ a:hover{
     }
     .h1{
         color: #FFFFFF;
-        font-family: 'Julius Sans One', sans-serif;
+        font-family: 'Libre Baskerville', sans-serif;
         font-weight: lighter;
         font-size: 50px;
     }
     .h2{
         color: #FFFFFF;
-        font-family: 'Julius Sans One';
+        font-family: 'Libre Baskerville', sans-serif;
         font-weight: lighter;
         font-size: 30px;
     }
     .header-picture{
-        position: absolute;
+        /* position: absolute; */
         top: 2em;
         left: 1em;
         width: 140px;
@@ -366,7 +368,7 @@ a:hover{
         font-size: 72px;
     }
     .authors{
-        grid-column: 1 / 4;
+        grid-column: 1 / -1;
         column-count: 2;
         grid-row: 8;
         background-color: #ecf5ef;

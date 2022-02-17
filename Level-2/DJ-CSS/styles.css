@@ -74,7 +74,7 @@ p{
     border: 2px solid blue;
     height: 90px;
     width: 90px;
-    transition: transform 1800ms ease-in 1800ms, width 1800ms ease-in 1800ms, height 1800ms ease-in 1800ms
+    transition: transform 800ms ease-in 800ms, width 1800ms ease-in 1800ms, height 1800ms ease-in 1800ms
 }
 .box4:hover {
     transform: skewY(25deg);
@@ -87,7 +87,7 @@ p{
     height: inherit;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     opacity: 0;
-    transition: opacity 1500ms ease-in 1500ms
+    transition: opacity 1800ms ease-in 1500ms
 }
 .lean:hover {
     opacity: 1
