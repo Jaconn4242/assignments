@@ -2,12 +2,13 @@
 
 
 class Player {
-    constructor(name, totalCoins, status, hasStar){
+    constructor(name, totalCoins = 0, status, hasStar){
         this.name = name;
-        this.totalCoins = 0;
+        this.totalCoins = totalCoins;
         this.status = "Big"
         this.hasStar = false
     }
+
     
     setName (namePicked){
         this.name = namePicked

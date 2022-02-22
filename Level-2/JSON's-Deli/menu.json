@@ -1,0 +1,70 @@
+{
+    "menu": [
+        {
+            "appetizers": [
+                { 
+                    "name": "onion rings",
+                    "ingredients": ["white onions, bread crumbs"],
+                    "description": "A large portion of fried onion rings served in a basket"
+                },
+                {
+                    "name": "Mozzerella Sticks",
+                    "ingredients": ["cheese sticks, bread crumbs"],
+                    "description": "Seven large Mozzerella Sticks served with marinara sauce"
+                }
+            ]
+        },
+        {
+            "cold sandwiches": [
+                {
+                    "name": "turkey sandwich",
+                    "ingredients": ["White/wheat toast", "turkey", "mayonaise"],
+                    "description": "served hot or cold with your choice of side"
+                },
+                {
+                    "name": "Italian Sandwich",
+                    "ingredients": ["sub roll", "american cheese", "pepperoni", "salami", "ham"],
+                    "description": "served cold with your choice of side"
+                }
+            ]
+        },
+        {
+            "hot sandwiches": [
+                {
+                    "name": "Rueben sandwich",
+                    "ingredients": ["White/wheat toast", "corned beef", "saukraut"],
+                    "description": "served hot with your choice of side"
+                },
+                {
+                    "name": "Italian Sandwich",
+                    "ingredients": ["sub roll", "american cheese", "pepperoni", "salami", "ham"],
+                    "description": "can be toasted, served with your choice of side"
+                }
+            ]
+        },
+        {
+            "desserts": [
+                {
+                    "name": "lava cake",
+                    "ingredients": ["chocolate cake", "chocolate syrup", "whipped cream"],
+                    "description": "a hot delicious treat served with hot chocolate cream"
+                },
+                {
+                    "name": "ice cream sandwich",
+                    "ingredients": ["vanilla ice cream", "soft chocolate layer"],
+                    "description": "one square ice cream sandwich wrapped"
+                }
+            ]
+        },
+        {
+            "drinks": [
+                {
+                    "name": "water"
+                },
+                {
+                    "name": "coke"
+                }
+            ]
+        }
+    ]
+}

@@ -36,7 +36,7 @@
 
 // function mapVegetables(arr) {
 //      let result = arr.map(carrot => {
-//         return  {type: "carrot", name: carrot} 
+//         return  {something: "carrot", name: carrot} 
 //     })
 //     return result
 // }
@@ -111,7 +111,7 @@
 //     return `Hi ${firstName} ${lastName} how does it feel to be ${age}?`
 // }
 
-// console.log(printString(firstName, lastName, 100))
+// console.log(printString("Jane", "Doe", 100 ))
 
 
 
@@ -141,6 +141,7 @@
 //       return arr.filter(animal => animal.type === "dog")
 //  }
 //  console.log(filterForDogs(animals))
+// -------------------------------------Could I have shortened the function above?-------------------------------------------------
 
 
 
@@ -177,11 +178,13 @@
 
 // Write a function that returns a food object with the array names as properties. You'll use an ES6 shorthand syntax that becomes
 //  useful when a variable name is mentioned twice in both the name and value of properties in your object:
-function combineFruit(fruit, sweets, ...vegetables){
-    return {fruit}
-}
+// function combineFruit(fruit, sweets, vegetables){
+//     return {fruit: fruit, sweets, vegetables}
+// }
 
-console.log(combineFruit(["apple", "pear"],["cake", "pie"], ["carrot"]))
+
+// console.log(combineFruit(["apple", "pear"],["cake", "pie"], ["carrot"]))
+// May have done this wrong ----------------------------------------------------ask instructor------------------------------
 
 
 
