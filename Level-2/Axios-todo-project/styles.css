@@ -149,7 +149,7 @@ body{
     padding: .5em;
 }
 .my-form{
-    text-align: center;
+    
     border-bottom: 5px solid rgb(184, 113, 7);
     margin-top: 2em;
     padding-bottom: 3em;
@@ -163,7 +163,10 @@ body{
     height: 50px;
     font-size: 30px;
     width: 200px;
-    overflow:visible
+    overflow:visible;
+}
+::placeholder{
+    font-size: 10px;
 }
 .add-item-button{
     background-color: black;
