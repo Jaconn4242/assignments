@@ -98,6 +98,13 @@ const createTodo = (data) => {
          ol.remove()
         })
         
+
+    // if(data.length = 4){
+    //     alert("lets keep the list item max at 5 for now. Please delete or edit your current list")
+    //     myForm.button.disabled = true
+    // } 
+
+
     }
 }
 // clear data() that resets database(called at FOR loop above)
