@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Axios todo list</title>
+  </head>
+  <body>
+      <nav class="navigation-bar">
+          
+          <a href="index.html" id="Home">Home</a>
+          <a href="completed.html" id="Completed-items">Completed</a>
+      </nav>
+      
+    <h1 class="heading">To do list</h1>
+    <div class="main-container">
+
+      <form name="myForm" class="my-form">
+        <input name="new" class="new-list-item" type="text" />
+        <button name="button" class="add-item-button">Add Item</button>
+      </form>
+      
+      <div id="todo-list"></div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
