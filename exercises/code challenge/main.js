@@ -1,24 +1,21 @@
+// Your task is to split the chocolate bar of given dimension n x m into small squares. Each square is of size 1x1 and unbreakable. Implement a function that will return minimum number of breaks needed.
 
-for(let i = 1; i<100; i++){
+// For example if you are given a chocolate bar of size 2 x 1 you can split it to single squares in just one break, but for size 3 x 1 you must do two breaks.
 
-   let sum = new Array()
+// If input data is invalid you should return 0 (as in no breaks are needed if we do not have any chocolate to split). Input will always be a non-negative integer.
 
-   if(i % 3 === 0){
-      sum.push(i)
-   } 
-   else if(i % 5 === 0){
-      sum.push(i)
+
+function breakChocolate(n,m) {
+   let snap = m
+   if(n > m  && m == 1){
+     return `The number of breaks is ${n-m}`
+   } else if(n > m && m == 2){
+     return `The number of breaks is ${(n)}`
+   } else if(n > m && m > 2){
+     return `The number of breaks is ${(n-1) + (m-1)}`
+   } else {
+     return `You either have no chocolate, or it can't be broken`
    }
-  //  console.log(sum)
-  
-
+ }
  
-  function total(sum){
-      let result = sum.reduce((final, num) => {
-          final += num
-          return final
-      })
-      console.log(result)
-  }
-}
-
+ console.log(breakChocolate(6,1))

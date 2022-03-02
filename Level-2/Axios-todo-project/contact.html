@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+</head>
+<body>
+    <nav class="navigation-bar">
+        <a href="index.html" id="Home">Home</a>
+        <a href="completed.html" id="Completed-items">Completed</a>
+        <a href="about.html" id="About">About</a>
+        <a href="contact.html" id="About">Contact</a>
+    </nav>
+    <form class="contact-form">
+    <h1>Contact Form</h1>
+
+    <label>First name:</label>
+    <div name="first-name">
+        <input type="text" name="first-name">
+    </div>
+
+    <label>Feedback:</label>
+    <select name="gender" id="feedback">
+        <option value="prefer">Prefer Not to say</option>
+        <option value="awesome">Awesome!</option>
+        <option value="needs-work">Needs work</option>
+        <option value="Not impressed">Not impressed</option>
+    </select>
+    
+    <fieldset class="additional-comments">
+        <legend>Additional Comments</legend>
+        <textarea id="user-comment"></textarea>
+    </fieldset>  
+    
+</form>
+    
+</body>
+</html>
