@@ -18,7 +18,7 @@ body, html{
   font-size: 17px;
 }
 .Journal-entry{
-  padding: 3em;
+  padding: 2em 2em 3em 2em;
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
 }
 .Card--destination{
@@ -26,8 +26,7 @@ body, html{
   border-radius: 6px;
   margin-right: 2em;
   width: 40%;
-  height: 330px;
-
+  height: 310px;
 }
 .Card--location-icon{
   width: 17px;
@@ -42,6 +41,16 @@ body, html{
 .Card--information{
   margin-left: 18em;
   padding-top: 2em;
+}
+/*---------------- mobile/tablet view below------------------- */
+@media only screen and (min-width: 820px){
+  .Card--destination{
+    float: left;
+    border-radius: 6px;
+    margin-right: 2em;
+    width: 40%;
+    height: 250px;
+  }
 }
 
 
