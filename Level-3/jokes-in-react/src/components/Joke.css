@@ -1,0 +1,13 @@
+.Joke--container{
+    outline: 2px solid yellow;
+    padding: .25em;
+}
+textarea::placeholder{
+    text-align: center;
+    padding-top: 6px;
+}
+textarea{
+    max-width: 700px;
+    max-height: 200px
+}
+
