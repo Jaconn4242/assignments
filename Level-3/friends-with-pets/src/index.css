@@ -1,0 +1,30 @@
+html,body{
+    margin: 0;
+}
+html{
+    margin-top: 0;
+    
+}
+.FriendList{
+    margin: auto;
+    width: 300px;
+    box-shadow: 0 2px 18px 0;
+    background-color: aquamarine;
+}
+.Friend{
+    text-align: center;
+    background: greenyellow;
+    outline: 2px solid black;
+}
+.Pet{
+    display: flex;
+    border: 2px solid blue;
+}
+.App > h1{
+    text-align: center;
+    text-decoration: underline;
+    background-color: orange;
+    padding: 1em;
+    margin-top: 0;
+}
+
