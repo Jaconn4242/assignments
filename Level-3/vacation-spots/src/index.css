@@ -1,0 +1,65 @@
+html, body{
+  margin: 0; 
+  font-family: 'Noto Serif Display', serif;
+}
+
+.Header{
+  background: linear-gradient(135deg, white, red);
+  padding: 1em;
+}
+
+.Card{
+  position: relative;
+  box-shadow: 0px 2px 5px;
+  width: 400px;
+  padding: 1em;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.Card:hover .BookNow{
+  opacity: 1
+
+}
+.Card > h1{
+  position: absolute;
+  z-index: 1;
+  left: .70em;
+  color: white;
+}
+.Card > h3{
+  position: absolute;
+  z-index: 1;
+  left: 1.3em;
+  top: 4em;
+  color: white;
+}
+.Card > h5{
+  position: absolute;
+  z-index: 1;
+  top: 8.6em;
+  left: 1.8em;
+  color: white;
+}
+.BookNow{
+  position: absolute;
+  z-index: 1;
+  top: 9.5em;
+  right: 1.6em;
+  background-color: silver;
+  padding: .25em;
+  color: black;
+  font-weight: 900;
+  opacity: 0
+}
+.BookNow:hover{
+  transform: scale(1.2,1.6);
+  border-radius: 5px;
+  background-color: green;
+  font-weight: 900;
+}
+.Card--image{
+  border-radius: 10px;
+  width:398px;
+  height: 190px;
+  filter: brightness(50%);
+}
