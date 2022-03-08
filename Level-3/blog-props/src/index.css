@@ -1,0 +1,106 @@
+/* desktop view below --------------------------------- */
+body {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.Header--main-container{
+  height: 75vh;
+  background-image: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ym9vayUyMGRlc2slMjBhbmQlMjBwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  filter: brightness(50%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  color:#FFFFFF
+}
+.Header--main-title{
+  font-size: 80px;
+  margin-top: 3em;
+  line-height: 1px;
+  background: rgba(white, white, white, 5);
+}
+.NavBar--main-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 60px 10px 60px;
+  color: #FFFFFF
+}
+.NavBar--title{
+  margin-right: auto;
+  font-size: 20px;
+}
+.NavBar--list-container{
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+.BlogPost--main-container{
+  text-align: left;
+  margin: auto;
+  margin-top: 1.5em;
+  padding: .5em 1em .5em;
+  width: 50vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 1px 6px 1px;
+}
+.BlogPost--main-container > a{
+  text-decoration: none;
+  color: black;
+}
+.BlogPost--main-container > h2{
+  font-size: 40px;
+  margin-bottom: 1px;
+}
+.BlogPost--main-container > h2:hover{
+  color: rgb(45, 180, 224)
+}
+.BlogPost--main-container > span{
+  color: grey;
+}
+.BlogPost--main-container > a:hover{
+  color: rgb(45, 180, 224)
+}
+
+.Footer--wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  width: fit-content;
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 600;
+  padding: 1em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  /* margin-top: 2em; */
+}
+.Footer--wrapper > img{
+  width: 20px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.App--button-container{
+  text-align: right;
+  padding: 2em;
+  margin-right: 8.5em;
+}
+.App--button{
+  height: 50px;
+  background-color: #0085A1;
+  border: none;
+  padding: 16px 28px;
+  font-size: 17px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+
+/* mobile/tablet view below--------------------------------------- */
+@media only screen and (min-width: 800px){
+
+}
+
