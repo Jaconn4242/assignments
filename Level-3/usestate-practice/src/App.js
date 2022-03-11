@@ -2,21 +2,22 @@ import React, {useState} from "react"
 
 export default function App() {
 
-  const [person, setPerson] = React.useState({
+  const [person, setPerson] = useState({
     firstName: "John",
     lastName: "Smith"
   });
 
-const age = {age: 30}
+const age = 30
 
 function addKvp(){
-setPerson(prevState => [...prevState + {...age}])
+setPerson(prevState => ({...prevState, age}))
 }
   
   return (
     <>
     <button onClick={addKvp}>Make things Happen</button>
-    <h1>{person}</h1>
+    <h1>{person.firstName + " " + person.lastName}</h1>
+    <p>{person.age}</p>
     </>
   );
 }

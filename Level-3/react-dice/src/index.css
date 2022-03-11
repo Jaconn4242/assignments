@@ -1,0 +1,45 @@
+
+.diceBox-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 5px solid brown;
+  padding: 1em 1em 2em 1em;
+  
+}
+button{
+  display: flex;
+  justify-content:center;
+  margin: auto;
+  margin-top: 4em;
+  padding-top: 1.7em;
+  font-family:cursive;
+  width: 75px;
+  height: 75px;
+  border: 5px solid;
+  transition: background-color 500ms ease-in 100ms, border-radius 2000ms ease-in 100ms;
+}
+button:focus{
+  background-color: Green;
+  border-radius: 50%;
+  transform: scale(1.5);
+}
+.border{
+  position: relative;
+  border: 2px solid black;
+  width: 75px;
+  height: 75px;
+  margin-top: 1em;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 7px;
+}
+.border h1{
+  position: absolute;
+  font-size: 31px;
+  left: 27px;
+  bottom: 1px;
+  transform: rotate(-45deg);
+}
+.Greeting{
+  text-align: center;
+}

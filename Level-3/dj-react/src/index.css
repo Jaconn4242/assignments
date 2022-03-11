@@ -1,0 +1,68 @@
+body{
+  background-image: url(https://wallpaperaccess.com/full/782146.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 40em;
+}
+.Squares-wrapper{
+  display: grid;
+  grid-template: 100px 100px / 100px 100px;
+  justify-content: center;
+  padding-bottom: 20px;
+  gap: .25em;
+
+}
+.Square-1{
+  border: 2px solid black;
+}
+.Square-2{
+  border: 2px solid black;
+}
+.Square-3{
+ border: 2px solid black;
+}
+.Square-4{
+  border: 2px solid black;
+}
+
+.Button-wrapper{
+ display: grid;
+ grid-template-rows: repeat(5,40px);
+ grid-template-columns: repeat(2, 200px);
+ justify-content: center;
+ gap: .25em;
+ width: fit-content;
+ margin: auto;
+ background:none;
+ padding: .25em;
+}
+.Button-wrapper > button{
+  background-color: red;
+}
+.MakeNoise-button{
+  grid-column: 1 / -1;
+}
+.Button-wrapper > button:hover{
+  border-radius: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+}
+.Refresh-wrapper{
+  grid-column: 1 / -1;
+  width: fit-content;
+  margin: auto
+}
+.Refresh{
+  background-color: lime
+}
+.noise-wrapper{
+  grid-column: 1 / -1;
+  margin: auto;
+}
+.noise-wrapper > button{
+  margin-left: 5px;
+  background-color: red;
+  padding: 5px;
+}
+
+
