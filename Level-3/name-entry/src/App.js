@@ -1,39 +1,39 @@
 import React, {useState} from "react"
-import Test from "./Test"
+import ListItems from "./components/ListItems"
 
+export default function App(){
 
+// declare state
+const [entry, setEntry] = useState("")
+const [list, setList] = useState([])
 
-
-function App() {
-  const [submitted, setSubmitted] = useState(false)
-  const [entry, setEntry] = useState( [{InputOne: ""}] )
-  console.log(entry)
-  
-function handleChange(e){
+// OnChange and OnSubmit functions
+const onChange = (e) => {
+  setEntry(e.target.value)
+}
+const handleSubmit = (e) => {
   e.preventDefault()
-  const {name, value} = e.target
-  setEntry(prevState => {
-    return {
-      ...prevState, [name]:value
-    }
-  })
- }
-
- function handleClick(e){
-   e.preventDefault()
-   setSubmitted(true)
+  setList(prevList => [...prevList, entry])
+  setEntry("")
 }
 
+// generating a unique key value for list items
+const id = Math.floor(Math.random() * 10000)
 
   return (
-    <form className="App" >
-      <h1>{entry.InputOne}</h1>
-      <input onChange={handleChange}name="InputOne" ></input>
-      <button onClick={handleClick}>Add Name</button>
-      {submitted && <Test data={entry.InputOne}/>}
+    <form className="Form" onSubmit={handleSubmit}>
+      <h1>What's the plan for Today?</h1>
+      <input type="text" 
+           placeholder="type here..." 
+           value={entry}
+           onChange={onChange}
+           className="Form-input"
+           />
+      <button className="Form-button">Add Item</button>
+      <ListItems  
+                 list={list} 
+                 key={entry} 
+                 />
     </form>
-  );
+  )
 }
-
-
-export default App;
