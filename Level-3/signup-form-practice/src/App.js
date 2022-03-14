@@ -10,16 +10,17 @@ export default function App() {
       okayToEmail: false
     }
   )
-
+    console.log(formData.okayToEmail)
   const [submitted, setSubmitted] = useState(false)
     
     function handleChange(e) {
         e.preventDefault()
-        const {name, type, value, checked} = e.target
+        const {name, type, checked} = e.target
+        const value = type === "checkbox" ? checked : e.target.value
         setFormData(prevFormData => {
             return {
                     ...prevFormData,
-                    [name]:type === "checkbox" ? checked : value
+                    [name]:value
                    }
         })
     }
@@ -73,7 +74,12 @@ export default function App() {
                     <input
                         id="okayToEmail"
                         type="checkbox"
-                        onChange={handleChange}
+                        onChange={(e) => 
+                            setFormData(prevState => ({
+                                ...prevState,
+                                okayToEmail: !prevState.okayToEmail
+                            }))
+                        }
                         checked={formData.okayToEmail}
                         name="okayToEmail"
 
