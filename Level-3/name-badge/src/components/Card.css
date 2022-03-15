@@ -1,0 +1,80 @@
+.Form--title{
+    margin: 0;
+    padding: .25em;
+    background-color: orange;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.Form--container{
+    border: 2px solid black;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+input{
+    height: 30px;
+    border-radius: 5px;
+    text-indent: 3px;
+}
+.comments{
+    grid-column: 1 / -1;
+    text-indent: 3px;
+    max-width: 730.4;
+}
+
+
+.Preview--container{
+    border: 4px solid white;
+    margin-top: 2em;
+}
+.Preview--year{
+    color: white;
+    margin-right: 10px;
+}
+.Preview--make{
+    color: white;
+    margin-right: 10px;
+}
+.Preview--model{
+    color: white;
+    margin-right: auto;
+}
+.Preview--header{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    background-color: black;
+    border-bottom: 2px solid rgb(41, 37, 37);
+}
+.Preview--image-container{
+    padding: 3em;
+    background-color: rgb(90, 87, 87);
+    text-align: center;
+}
+.Preview--image{
+    width: 600px;
+    border-radius: 5px;
+}
+.Preview--contact-seller{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    border-radius: 5px;
+    padding: .5em;
+}
+.Preview--contact-seller:hover{
+    transform: scale(1.1);
+}
+.Preview--aircraft-info-container{
+    background-color: whitesmoke;
+    padding-top: 1em;
+}
+.Preview--comments > legend{
+    font-weight: bold;
+}
+
