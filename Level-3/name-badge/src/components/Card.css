@@ -1,3 +1,5 @@
+/* This file includes css for Card.js and Preview.js */
+
 .Form--title{
     margin: 0;
     padding: .25em;
@@ -13,6 +15,8 @@
     gap: 20px;
     background-color: whitesmoke;
     border-radius: 5px;
+    width: 70%;
+    margin: auto
 }
 input{
     height: 30px;
@@ -24,8 +28,13 @@ input{
     text-indent: 3px;
     max-width: 730.4;
 }
+.view-preview-button{
+    grid-column: 1 / -1;
+    width: 200px;
+    margin: auto;
+}
 
-
+/* Preview.js CSS below */
 .Preview--container{
     border: 4px solid white;
     margin-top: 2em;
@@ -69,6 +78,7 @@ input{
 }
 .Preview--contact-seller:hover{
     transform: scale(1.1);
+    position: relative;
 }
 .Preview--aircraft-info-container{
     background-color: whitesmoke;
@@ -77,4 +87,40 @@ input{
 .Preview--comments > legend{
     font-weight: bold;
 }
+.Preview--contact-container{
+    position: absolute;
+    background-color: whitesmoke;
+    right: .6em;
+    bottom: 11.3em;
+    color: black;
+    border-radius: 5px;
+    opacity: 0;
+}
+.Preview--contact-name{
+    padding-left: 5px;
+    line-height: 2px;
+}
+.Preview--contact-email{
+    padding-left: 5px;
+    color: blue;
+    text-decoration: underline;
+}
+.Preview--contact-seller:hover + .Preview--contact-container{
+    opacity: 1
+}
+.Footer{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    bottom: 0;
+    width: 100%
+}
+span{
+    font-size: 17px;
+    text-decoration: underline;
+    margin-left: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 

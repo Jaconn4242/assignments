@@ -1,7 +1,7 @@
 
 
 function Pet(props){
-    const{name, breed} = props
+    const {name, breed} = props
     return (
         <fieldset className="Pet">
             <legend>{`Name: ${name}`}</legend>

@@ -2,8 +2,11 @@ import React, {useState} from 'react'
 import "./Card.css"
 import Preview from "./Preview"
 
+
+
 function Card() {
     // state defined below
+
     const [showPreview, setShowPreview] = useState(false)
     const [badgeData, setBadgeData] = useState([])
     const [cardData, setCardData] = useState(
@@ -27,10 +30,14 @@ function Card() {
     // on submit function below
     const handleSubmit = e => {
         e.preventDefault()
-        setBadgeData(cardData)
+        setBadgeData(prevState => [...prevState, cardData])
         setShowPreview(true)
         console.log("badge data",badgeData)
     }
+
+    let repeater = badgeData.map((post, i) => (
+        <Preview data={cardData}key={i}/>
+      ))
 
   return (
     <>
@@ -38,20 +45,23 @@ function Card() {
     <form className='Form--container' onSubmit={handleSubmit}>
         <input 
             type="text" 
+            minLength={3}
             placeholder='*First name'
             value={cardData.firstName}
             name="firstName"
             onChange={handleChange}
              />
              <input 
-            type="text" 
+            type="text"
+            minLength={3} 
             placeholder='*Last name'
             value={cardData.lastName}
             name="lastName"
             onChange={handleChange}
              />
              <input 
-            type="text" 
+            type="text"
+            minLength={3} 
             placeholder='*Year'
             value={cardData.year}
             name="year"
@@ -59,6 +69,7 @@ function Card() {
              />
              <input 
             type="text" 
+            minLength={3}
             placeholder='*Make'
             value={cardData.make}
             name="make"
@@ -66,13 +77,15 @@ function Card() {
              />
              <input 
             type="text" 
+            minLength={3}
             placeholder='*Model'
             value={cardData.model}
             name="model"
             onChange={handleChange}
              />
              <input 
-            type="email" 
+            type="email"
+            minLength={3} 
             placeholder='*Email'
             value={cardData.email}
             name="email"
@@ -87,9 +100,9 @@ function Card() {
             className='comments'
             type="text"
             />
-        <button>View Preview</button>
+        <button className='view-preview-button'>View Preview</button>
     </form>
-    {showPreview && <Preview data={badgeData} key={badgeData.firstName}/>}
+    {repeater}
     </>
   )
 }

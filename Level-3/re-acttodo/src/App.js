@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react'
+import Form from "./components/Form"
 
 export default function App() {
     const [names, setNames] = useState("")
@@ -9,13 +10,14 @@ export default function App() {
         const {value} = e.target
         setNames(value)
     }
-
+console.log(`Names: ${names}, List Name ${listNames}`)
     const handleSubmit = (e) => {
         e.preventDefault()
         setListNames(prevList => [...prevList, names])
+        setNames("")
     }
 
-    const nameEntries = listNames.map(name => (<li>{name}</li>))
+    const nameEntries = listNames.map((name, i) => <Form key={i} name={name}/>)
 
     return(
         <form onSubmit={handleSubmit}>

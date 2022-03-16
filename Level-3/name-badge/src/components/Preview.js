@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Preview(props) {
-    console.log("preview data", props)
+    console.log("preview data", props.data)
   return (
     <div className='Preview--container'>
         <div className='Preview--header'>
@@ -9,6 +9,10 @@ function Preview(props) {
             <h1 className='Preview--make'>{props.data.make}</h1>
             <h1 className='Preview--model'>{props.data.model}</h1>
             <a href='www.google.com' className='Preview--contact-seller'>contact seller</a>
+            <div className='Preview--contact-container'>
+                <p className='Preview--contact-name'>{props.data.firstName} {props.data.lastName}</p>
+                <p className='Preview--contact-email'>{props.data.email}</p>
+            </div>
         </div>
         <div className='Preview--image-container'>
             <img className="Preview--image" alt=""src="./Airplane.jpg" /> 
