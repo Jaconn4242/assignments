@@ -1,6 +1,6 @@
-export default [
+const Data = [
     {
-        id: 1,
+        
         title: "Gatlingburg",
         location: "Tennessee",
         googleMapsUrl: "https://www.google.com/maps/place/Gatlinburg,+TN+37738/@35.7272298,-83.5680565,12z/data=!3m1!4b1!4m5!3m4!1s0x885953eacb08a589:0x4ab1d7ae7eb779a8!8m2!3d35.714259!4d-83.5101638",
@@ -10,7 +10,7 @@ export default [
         mainImageUrl: "https://media.istockphoto.com/photos/sunrise-over-gatlinburg-skyline-picture-id956105542?b=1&k=20&m=956105542&s=170667a&w=0&h=8YTauJ7O4hW5gX3X59Go3kTiHTVWNm5z_DNHGCC1avA="
     },
     {
-        id: 2,
+        
         title: "Myrtle Beach",
         location: "South Carolina",
         googleMapsUrl: "https://www.google.com/maps/place/Myrtle+Beach,+SC/@33.7199524,-79.0185513,11z/data=!3m1!4b1!4m5!3m4!1s0x890068953b552101:0xbc0fb115b5d09618!8m2!3d33.6890603!4d-78.8866943",
@@ -20,7 +20,7 @@ export default [
         mainImageUrl: "https://media.istockphoto.com/photos/myrtle-beach-south-carolina-usa-skyline-picture-id805157896?b=1&k=20&m=805157896&s=170667a&w=0&h=fFC9PPViJMQYHbt2qbNQEuNNk9PCWbF0_msY16dvXz8="
     },
     {
-        id: 3,
+        
         title: "Helen",
         location: "Georgia",
         googleMapsUrl: "https://www.google.com/maps/place/Helen,+GA+30545/@34.7067241,-83.7594703,13z/data=!3m1!4b1!4m5!3m4!1s0x885f37d40b3a2aa1:0x8ed537fed96523a8!8m2!3d34.7014839!4d-83.7315675",
@@ -30,3 +30,5 @@ export default [
         mainImageUrl: "https://media.istockphoto.com/photos/helen-georgia-usa-cityscape-picture-id533362459?b=1&k=20&m=533362459&s=170667a&w=0&h=mmhCEGtrHhA6CFvTmWebYiqRnnGXiXiD-2OnSXXnUDE="
     }
 ]
+
+export default Data

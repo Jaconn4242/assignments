@@ -1,21 +1,11 @@
-// Your task is to split the chocolate bar of given dimension n x m into small squares. Each square is of size 1x1 and unbreakable. Implement a function that will return minimum number of breaks needed.
+// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
 
-// For example if you are given a chocolate bar of size 2 x 1 you can split it to single squares in just one break, but for size 3 x 1 you must do two breaks.
+// ExamplesminMax([1, 2, 3, 4, 5]) ➞ [1, 5]
 
-// If input data is invalid you should return 0 (as in no breaks are needed if we do not have any chocolate to split). Input will always be a non-negative integer.
+// minMax([2334454, 5]) ➞ [5, 2334454]
+
+// minMax([1]) ➞ [1, 1]
 
 
-function breakChocolate(n,m) {
-   let snap = m
-   if(n > m  && m == 1){
-     return `The number of breaks is ${n-m}`
-   } else if(n > m && m == 2){
-     return `The number of breaks is ${(n)}`
-   } else if(n > m && m > 2){
-     return `The number of breaks is ${(n-1) + (m-1)}`
-   } else {
-     return `You either have no chocolate, or it can't be broken`
-   }
- }
- 
- console.log(breakChocolate(6,1))
+
+

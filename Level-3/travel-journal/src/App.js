@@ -4,10 +4,10 @@ import "./index.css"
 import Header from "./components/Header"
 import CardData from "./data"
 
-const cardElements = CardData.map(item => {
+const cardElements = CardData.map((item, i) => {
   return (
         <Card 
-            key={item.id}
+            key={i}
             item={item}
         />
   )

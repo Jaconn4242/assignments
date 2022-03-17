@@ -53,10 +53,13 @@ main{
 }
 .meme{
     position: relative;
+    text-align: center;
+
 }
 .Form--meme-image{
-  max-width: 100%;
+  width: 477px;
   border-radius: 3px;
+  
 }
 .meme--text{
   position: absolute;
@@ -82,6 +85,12 @@ main{
         -2px 0 0 #000,
         2px 2px 5px #000;
 
+}
+.bottom{
+  bottom: 0
+}
+.top{
+  top: 0
 }
 
 

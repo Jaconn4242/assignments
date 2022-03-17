@@ -33,10 +33,19 @@ function Card() {
         setBadgeData(prevState => [...prevState, cardData])
         setShowPreview(true)
         console.log("badge data",badgeData)
+        setCardData({
+            firstName: "",
+            lastName: "",
+            year: "",
+            make: "",
+            model: "",
+            email: "",
+            comments: ""
+        })
     }
 
     let repeater = badgeData.map((post, i) => (
-        <Preview data={cardData}key={i}/>
+        <Preview data={post}key={i}/>
       ))
 
   return (
