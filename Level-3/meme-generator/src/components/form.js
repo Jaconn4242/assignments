@@ -40,13 +40,26 @@ export default function Form() {
     const addMemeToList = (e) => {
         e.preventDefault()
         setSavedList(prevState => ([...prevState, meme]))
+        setMeme({
+            topText: "",
+            bottomText: "",
+            randomImage: "http://i.imgflip.com/1bij.jpg" 
+        })
     }
+    function deleteMeme(id) {
+        
+        setSavedList(prevState => prevState.filter((meme, i) => (i !== id )))
+    }
+    function customize(id, newInput) {
+        console.log(newInput, id)
+        setSavedList(prevState => prevState.map((meme, i) => (i === id ? {...meme, topText: newInput.newTop, bottomText: newInput.newBottom }: meme)))
+    }
+    
 
     const savedElements = savedList.map((item, i) => {
-        return (<Saved {...item} key={i} />)
+        return (<Saved {...item} key={i} id={i} customize={customize} deleteMeme={deleteMeme} />)
     })
-            console.log(savedList)
-            console.log(savedElements)
+      
     return (
         <main>
             <div className="form">

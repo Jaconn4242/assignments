@@ -1,10 +1,25 @@
-// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+// Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+// Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
 
-// ExamplesminMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
 
-// minMax([2334454, 5]) ➞ [5, 2334454]
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
 
-// minMax([1]) ➞ [1, 1]
+
+const grabNumbers = (arr) => {
+
+    let results = arr.filter(item => {
+        if(Number.isInteger(item)){
+            return item
+        }
+    })
+    return results
+}
+
+console.log(grabNumbers([1, 2, "a", "b", 44]))
+
+
 
 
 

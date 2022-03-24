@@ -118,7 +118,7 @@ main {
   /* text-overflow: ellipsis; */
   gap:1em;
   border: 2px solid black;
-  width: 700px;
+  width: fit-content;
   height: auto;
   padding: 1em;
   background-color: rgb(212, 207, 207);
