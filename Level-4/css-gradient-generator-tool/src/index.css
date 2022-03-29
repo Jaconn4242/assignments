@@ -1,0 +1,150 @@
+
+body{
+  padding: 4em
+}
+.App-title{
+  margin-bottom: .5em;
+  text-align: center;
+}
+.App{
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* section left CSS below */
+.section-left{
+  grid-column: 1 / 2;
+  border-right: 2px solid green;
+  padding: 1em;
+  width: 97%
+}
+.color-box{
+  width: auto;
+  height: 150px;
+  border: 2px dotted orange;
+  margin-bottom: .5em;
+  border-radius: 10px;
+}
+.code-block{
+  height: 70px;
+  border: 2px solid blue;
+  width:97%;
+  font-size: 12px;
+  background-color: rgb(109, 105, 105);
+  color: rgb(252, 181, 193)
+}
+
+/* section right CSS below */
+
+.section-right{
+  position: relative;
+  grid-column: 2 / 3;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.angle-value{
+  width: 40px;
+  text-align: center;
+}
+input{
+  margin: auto
+}
+.section-right-title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.question-icon{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.hidden-info-box{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  width: 400px;
+  margin: auto;
+  right: 1em;
+  bottom: 3em;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px 2px black;
+  padding: .7em
+}
+
+
+/* media query for mobile devices below */
+@media only screen and (max-width: 400px){
+
+  body{
+    padding: 1em
+  }
+  .App-title{
+    margin-bottom: .5em;
+    text-align: center;
+  }
+  .App{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  /* section left CSS below */
+  .section-left{
+    grid-column: 1 / 2;
+    border-right: 2px solid green;
+    padding: 1em;
+  }
+  .color-box{
+    width: auto;
+    height: 150px;
+    border: 2px dotted orange;
+    margin-bottom: .5em;
+    border-radius: 10px;
+  }
+  .code-block{
+    height: 70px;
+    border: 2px solid blue;
+    width:97%;
+    font-size: 12px;
+    background-color: rgb(109, 105, 105);
+    color: rgb(252, 181, 193)
+  }
+  
+  /* section right CSS below */
+  
+  .section-right{
+    position: relative;
+    grid-column: 2 / 3;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .angle-value{
+    width: 40px;
+    text-align: center;
+  }
+  input{
+    margin: auto
+  }
+  .question-icon{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 1.75em;
+    top: 2em;
+  }
+  .hidden-info-box{
+    opacity: 0;
+    position: absolute;
+    top: 4em;
+    right: 0;
+    width: fit-content;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 2px black;
+  }
+
+}
