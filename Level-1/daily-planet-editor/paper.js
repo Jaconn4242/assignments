@@ -12,10 +12,10 @@ just fix the existing ones.
 var enemies = ["Lex","Batman","Darkseid","Brainiac","General Zod","Doomsday"];
 
 function WhoWins (isThereKryptonite, enemyName){
-    if (isThereKryptonite === false) {
+    if (isThereKryptonite == "false") {
         return "Superman beats " + enemyName + ", of course";
     } else {
-        return `Depends on how quick Superman can get rid of the Kryptonite. ${enemy_name} could possibly win this one.`;
+        return `Depends on how quick Superman can get rid of the Kryptonite. ${enemyName} could possibly win this one.`;
     }
 }
 
@@ -25,7 +25,7 @@ for (var i = 0; i < enemies.length; i++) {
         isThereKryptonite = true;
     } else {
         isThereKryptonite = false;
-        console.log(WhoWins (isThereKryptonite, enemies[i]));
+        console.log(WhoWins(isThereKryptonite, enemies[i]));
     }
 }
     

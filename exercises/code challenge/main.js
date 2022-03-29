@@ -1,15 +1,32 @@
-const array = ["#3", "$$$", "C%4!", "Hey!", "!"];
+const walk = ['w','s','n','s','n','s','n','s','n','s']
 
-function findCharacters(array, character) {
-    const charArray = [];
-  for (var i = 0; i < array.length; i++) {
-    if (array[i].includes(character)) {
-      charArray.push(array[i])
+function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false
+  }
+  let northCount = new Array
+  let southCount= new Array
+  let westCount = new Array
+  let eastCount = new Array
+  for (i=0; i < walk.length; i++){
+    if (walk[i] === "n") {
+      northCount.push(i)
+    } else if (walk[i] === "s"){
+      southCount.push(i)
+    } else if (walk[i] === "w"){
+      westCount.push[i]
+    } else if (walk[i] === "e") {
+      eastCount.push[i]
     }
   }
-  return charArray
+  if ((eastCount.length === westCount.length) && (northCount.length === southCount.length)) {
+      return true
+      } else {
+        return false
+      }
 }
-console.log(findCharacters(array, "!"));
+
+console.log(isValidWalk(walk))
 
 
 
