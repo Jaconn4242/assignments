@@ -1,19 +1,23 @@
-import React, { useContext } from 'react'
-import {ThemeContext} from './themeContext'
+import React, {useContext} from 'react'
+import {ThemeContext} from './themeContextProvider';
 
-function Body(props) {
+function Body() {
+    const {theme, changeValue} = useContext(ThemeContext)
+
+    function handleChange(e) {
+      changeValue(e.target.value)
+    }
     
-    const {color, toggleTheme} = useContext(ThemeContext)
-    console.log(color)
   return (
-    <div className='Body'>
-        <div className='button-wrapper'>
-        <button onClick={toggleTheme} className='Body-buttons'>Light Theme</button>
-        <button className='Body-buttons'>Dark Theme</button>
-        <button className='Body-buttons'>Bright Theme</button>
-        </div>
+    <div className={`Body${theme}`}>
+        <select className="body-select-element" value={theme} onChange={handleChange}>
+          <option  value="light">Select a Theme</option>
+          <option  value="dark">Dark Mode</option>
+          <option  value="light">Light Mode</option>
+          <option  value="disco">Disco Mode</option>
+        </select>
     </div>
   )
 }
 
-export default Body
+export default Body;

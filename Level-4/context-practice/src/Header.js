@@ -1,14 +1,16 @@
-import React from 'react'
-import {ThemeContext} from './themeContext'
+import React, {useContext} from 'react'
+import { ThemeContext } from './themeContextProvider'
 
 function Header(props) {
-  return (
-    <div className='Header'>
-        <nav className='NavBar'>
-            <a href="" className='NavLinks'>Light </a>
-            <a href="" className='NavLinks'>About</a>
-            <a href="" className='NavLinks'>Contact</a>
 
+  const {theme} = useContext(ThemeContext)
+
+  return (
+    <div className={`Header${theme}`}>
+        <nav className={`NavBar`}>
+            <a href="./index.html" className={`NavLinks${theme}`}>Light </a>
+            <a href="./index.html" className={`NavLinks${theme}`}>About</a>
+            <a href="./index.html" className={`NavLinks${theme}`}>Contact</a>
         </nav>
     </div>
   )

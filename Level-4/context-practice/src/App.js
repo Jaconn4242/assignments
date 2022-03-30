@@ -1,21 +1,17 @@
-import React, {useState} from "react"
+import React from "react"
 import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
-import {ThemeContextProvider} from "./themeContext";
 
-function App(props) {
+
+function App() {
 
     return (
-    <>
-    <ThemeContextProvider>
-      <div className="App">
+      <>
         <Header />
         <Body />
         <Footer />
-      </div>
-    </ThemeContextProvider>
-    </>
+        </>
   );
 }
 
