@@ -1,0 +1,40 @@
+/* Header CSS below */
+.Header{
+  background-color: gainsboro;
+  border: 2px solid black;
+  padding: 1em;
+}
+.NavBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.NavLinks{
+  color: black;
+}
+
+/* Body CSS below */
+.Body{
+  height: 585px;
+  background-color: wheat;
+}
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding-top: 15em;
+}
+.Body-buttons{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* Footer CSS below */
+.Footer{
+  color: white;
+  text-align: center;
+  padding: 1em;
+  background-color: rgb(20, 24, 24);
+}
