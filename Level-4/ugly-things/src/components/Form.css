@@ -1,0 +1,17 @@
+.form{
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 2em;
+    background-color: rgb(0, 153, 255);
+  }
+  .input{
+      height: 25px;
+      text-indent: 6px;
+  }
+  .form-submit-button{
+      grid-column: 2 / 3;
+      width: 100px;
+      margin: auto;
+  }
