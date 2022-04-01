@@ -1,14 +1,15 @@
 import React, {useState, useContext} from "react"
 import { MainContext } from "../MainProvider"
+import axios from "axios"
 import "./Form.css"
 
 
 function Form(props) {
     // FROM PROVIDER
-    const {thingList, setThingList} = useContext(MainContext)
+    const {setThingList} = useContext(MainContext)
 
 
-    // USESTATE FOR THING
+    //  LOCAL USESTATE FOR THING
     const [thing, setThing] = useState({
         title: "",
         description: "",
@@ -20,10 +21,20 @@ function Form(props) {
         const {name, value} = e.target
         setThing(prevState => ({...prevState, [name]:value}))
     }
-    // SUBMIT TO ARRAY IN PROVIDER
+    // SUBMIT TO ARRAY IN PROVIDER AND POST TO API
     function handleSubmit (e){
         e.preventDefault()
         setThingList(prevState => ([...prevState, thing]))
+        // POST TO API
+        // let thing = {
+        //     title: thing.title,
+        //     imgUrl: thing.imgUrl,
+        //     description: thing.description
+        // }
+        axios.post("https://api.vschool.io/Jeff/thing/", thing)
+                .then(res => setThingList(prevState => ([...prevState, res.data])))
+                .then(error => console.log(error))
+
         setThing({
             title: "",
             description: "",
@@ -46,15 +57,15 @@ function Form(props) {
         <input type="text"
                 placeholder="ImgUrl"
                 className="description input"
-                name="description"
-                value={thing.description}
+                name="imgUrl"
+                value={thing.imgUrl}
                 onChange={handleChange}
         />
         <input type="text"
                 placeholder="Description"
                 className="imgUrl input"
-                name="imgUrl"
-                value={thing.imgUrl}
+                name="description"
+                value={thing.description}
                 onChange={handleChange}
         />
         <button className="form-submit-button">Submit</button>

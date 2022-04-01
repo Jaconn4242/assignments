@@ -4,11 +4,7 @@ import Form from "./components/Form";
 import UglyThingList from "./components/UglyThingList"
 import { v4 as uuidv4 } from "uuid";
 
-
-
 function App(props) {
-
-
 
   return (
     <div className="App">

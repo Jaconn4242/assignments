@@ -5,9 +5,11 @@ import Thing from "./Thing"
 
 
 function UglyThingList(props) {
-    // FROM PROVIDER
-    const {thingList, updateThingList} = useContext(MainContext)
-
+  
+  
+  // FROM PROVIDER
+  const {thingList} = useContext(MainContext)
+  
     console.log(thingList)
     const thingElements = thingList.map((element, i) => {
         return <Thing {...element} key={i}/>
@@ -15,7 +17,6 @@ function UglyThingList(props) {
   return (
     <div className='ugly-thing-list'>
         {thingElements}
-        {/* I want the code above to work */}
     </div>
   )
 }
