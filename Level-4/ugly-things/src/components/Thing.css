@@ -4,6 +4,7 @@
     height: 200px;
     margin: auto;
     margin-bottom: 1em;
+    border-radius: 5px;
 }
 .thing-container{
     display: flex;
@@ -23,6 +24,7 @@
     box-shadow: 0 5px 10px -5px black;
     margin-top: .75em;
     background-color: whitesmoke;
+    padding: .25em;
 }
 .thing-date{
     position: absolute;
@@ -38,8 +40,38 @@
     justify-content: center;
 }
 .thing-delete-button{
-    width: 37.5%
+    width: 37.5%;
+}
+.thing-delete-button:hover{
+    transform: scale(1.1)
 }
 .thing-edit-button{
-    width: 37.5%
+    width: 37.5%;
+}
+.thing-edit-button:hover{
+    transform: scale(1.1)
+}
+
+/* CSS for editing elements below */
+
+.thing-save-button{
+    width: 37.5%;
+}
+.thing-new-title-input{
+    box-shadow: 0 5px 10px -5px black;
+    margin-top: .75em;
+    background-color: whitesmoke;
+    height: 35px;
+    font-size: 30px;
+    border: 1px solid red;
+    padding: .25em;
+    text-indent:32%;
+}
+.thing-new-description-input{
+    width: 50%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid red;
+    text-indent:22%;
 }

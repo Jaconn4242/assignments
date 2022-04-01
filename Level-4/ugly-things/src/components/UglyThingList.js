@@ -11,18 +11,36 @@ function UglyThingList(props) {
   // FROM PROVIDER
   const {thingList, setThingList} = useContext(MainContext)
 
-    // DELETE REQUEST PASSED AS PROP TO THING COMPONENT
-    function handleDelete(id) {
-      axios.delete(`https://api.vschool.io/Jeff/thing/${id}`)
-          .then(res => console.log("response.data" + res.data))
-          .catch(err => console.log(err))
-      setThingList(thingList.filter(thing => (thing._id !== id)))
-      }
+  // DELETE REQUEST PASSED AS PROP TO THING COMPONENT
+  function handleDelete(id) {
+    axios.delete(`https://api.vschool.io/Jeff/thing/${id}`)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+    setThingList(thingList.filter(thing => (thing._id !== id)))
+  }
   
-    console.log(thingList)
-    const thingElements = thingList.map((element, i) => {
-        return <Thing {...element} key={i} handleDelete={handleDelete}/>
-    })
+  // PUT REQUEST PASSED AS PROP TO THING COMPONENET
+  function handleEdit(id, newInput) {
+    let updates = {
+      title: newInput.title,
+      description: newInput.description
+    }
+    axios.put(`https://api.vschool.io/Jeff/thing/${id}`, updates)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
+    setThingList(prevState => prevState.map(thing => (thing._id === id ? 
+      {...thing, title: newInput.title, description: newInput.description} : thing )))
+  }
+  
+  // MAPS THROUGH THINGlIST AND PASSES PROPS
+  const thingElements = thingList.map((element, i) => {
+      return <Thing {...element} 
+                    key={i} 
+                    handleDelete={handleDelete} 
+                    handleEdit={handleEdit}
+                    />
+  })
+
   return (
     <div className='ugly-thing-list'>
         {thingElements}

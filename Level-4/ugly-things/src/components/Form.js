@@ -35,10 +35,11 @@ function Form(props) {
         })
     }
 
-    console.log(thing)
+    console.log("thing:",thing)
 
   return (
     <>
+    <h1 className="main-header">Ugly Things -<h6 className="sub-header"> where venting about ugly things is ok</h6></h1>
     <form className="form" onSubmit={handleSubmit}>
         <input type="text"
                 placeholder="Title"
