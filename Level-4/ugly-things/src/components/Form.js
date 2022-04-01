@@ -24,13 +24,6 @@ function Form(props) {
     // SUBMIT TO ARRAY IN PROVIDER AND POST TO API
     function handleSubmit (e){
         e.preventDefault()
-        setThingList(prevState => ([...prevState, thing]))
-        // POST TO API
-        // let thing = {
-        //     title: thing.title,
-        //     imgUrl: thing.imgUrl,
-        //     description: thing.description
-        // }
         axios.post("https://api.vschool.io/Jeff/thing/", thing)
                 .then(res => setThingList(prevState => ([...prevState, res.data])))
                 .then(error => console.log(error))
@@ -74,4 +67,4 @@ function Form(props) {
   )
 }
 
-export default Form
+export default React.memo(Form)

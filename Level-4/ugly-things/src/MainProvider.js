@@ -6,13 +6,13 @@ const MainContext = React.createContext()
 function MainProvider(props){
 
     const [thingList, setThingList] = useState([])
+
     // GET REQUEST SETTING INITIAL STATE VALUE
-    useEffect(() =>
+    useEffect(() => {
     axios.get('https://api.vschool.io/Jeff/thing')
         .then(res => setThingList(res.data))
         .catch(err => console.log(err))
-    , [])
-
+    }, [])
 
     return(
         <MainContext.Provider value=
