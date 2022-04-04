@@ -1,0 +1,9 @@
+.Header{
+  font-size: 25px;
+  background: linear-gradient(135deg,  gold, rgb(36, 143, 250));
+}
+.NavBar{
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}

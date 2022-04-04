@@ -33,13 +33,11 @@
 // SEE IT IN A FUNCTION BELOW ----------------------------
 
 // function makeStrings(arr){
-//     let result = arr.map(string => string + "")
+//     let result = arr.map(string => string.toString())
 //     return result
 // }
 
 // console.log(makeStrings(arrayOfNumbers))
-
-
 
 
 // 3) Capitalize the first letter of each name in this array of names
@@ -187,15 +185,15 @@
 
 // function elementWrap(arr){
 //     // Below is just EXTRA ------ ORGANIZED THEM BY AGE.  USE AS REFERENCE FOR LATER
-//     // const result = arr.sort((a,b) => {
-//     //     if(a.age < b.age){
-//     //         return -1
-//     //     }
-//     //     if(a.age > b.age){
-//     //         return 1
-//     //     }
-//     //     return 0
-//     // })
+//     const result = arr.sort((a,b) => {
+//         if(a.age < b.age){
+//             return -1
+//         }
+//         if(a.age > b.age){
+//             return 1
+//         }
+//         return 0
+//     })
 //     // END OF EXTRA -----------------------------------------------------------
    
 //     const domResult = finalNames.map(item => {
