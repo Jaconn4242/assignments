@@ -1,0 +1,49 @@
+.home{
+    height: 32em;;
+}
+.company-number{
+    height: 40px;
+    width: 50%;
+    background-color: #2959b8;
+    color: #FFFFFF;
+}
+.company-directions{
+    height: 40px;
+    width: 50%;
+    background-color: #2959b8;
+    color: #FFFFFF;
+}
+.welcome-title{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.mission-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 2px 5px ;
+    padding: 2em;
+}
+.mission-statement{
+    grid-column: 1 / 2;
+    border-right: 1px solid black;
+    margin: auto;
+}
+.mission-img{
+    grid-column: 2 / 3;
+    margin: auto;
+    border-radius: 50%;
+}
+.button-container{
+    text-align: center;
+}
+.button-to-services{
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 20px;
+}
+.button-to-services:hover{
+   transform: scale(1.2);
+   background-color: #2959b8;
+   color: #FFFFFF;
+}

@@ -1,35 +1,45 @@
-const walk = ['w','s','n','s','n','s','n','s','n','s']
 
-function isValidWalk(walk) {
-  if (walk.length !== 10) {
-    return false
-  }
-  let northCount = new Array
-  let southCount= new Array
-  let westCount = new Array
-  let eastCount = new Array
-  for (i=0; i < walk.length; i++){
-    if (walk[i] === "n") {
-      northCount.push(i)
-    } else if (walk[i] === "s"){
-      southCount.push(i)
-    } else if (walk[i] === "w"){
-      westCount.push[i]
-    } else if (walk[i] === "e") {
-      eastCount.push[i]
-    }
-  }
-  if ((eastCount.length === westCount.length) && (northCount.length === southCount.length)) {
-      return true
-      } else {
-        return false
-      }
-}
+// take in a number and add each individual number in that number
+// const OddishorEvenish = (num) => {
 
-console.log(isValidWalk(walk))
+//     let string = num.toString().split("")
+//     let final = string.reduce((final, num) => {
+//            return final + Number(num)
+//         }, 0)
+//         if(final % 2 === 0){
+//           return "Evenish"
+//         } else {
+//           return "Oddish"
+//         }
+    
+// }
 
 
 
+// console.log(OddishorEvenish(123))
+
+
+// Sort by age youngest to oldest
+// let test = [
+//   {name: "john", age: "5"},
+//   {name: "john", age: "10"},
+//   {name: "john", age: "1"},
+// ]
 
 
 
+// function sortByAge(lineUpData){
+//   let sortedPlayers = lineUpData.sort((a, b) => {
+    
+//       if(Number(a.age) < Number(b.age)){
+//           return -1
+//       }
+//       if(Number(a.age) > Number(b.age)){
+//           return 1
+//       }
+//       return 0
+//   })
+// return sortedPlayers
+// }
+
+// console.log(sortByAge(test))

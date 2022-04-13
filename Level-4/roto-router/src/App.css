@@ -1,9 +1,31 @@
+/* Header CSS below*/
 .Header{
   font-size: 25px;
-  background: linear-gradient(135deg,  gold, rgb(36, 143, 250));
+  background: linear-gradient(135deg,  gold, #2959b8);
+  margin-bottom: none;
 }
 .NavBar{
   display: flex;
   justify-content: space-around;
   padding: 1em;
+}
+.NavBar > a{
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: .25em
+}
+
+/* Footer CSS below */
+.Footer-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: .25em;
+  background-color: #2959b8;
+}
+.Footer-description{
+
+  color: white; 
 }

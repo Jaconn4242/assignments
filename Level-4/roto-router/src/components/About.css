@@ -1,0 +1,11 @@
+.about-container{
+    box-shadow: 0 4px 10px 4px;
+    background-color: gainsboro;
+    padding: 2em;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 5em;
+}
+.about-title{
+    font-family: sans-serif;
+}

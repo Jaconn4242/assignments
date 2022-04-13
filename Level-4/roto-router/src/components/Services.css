@@ -1,0 +1,20 @@
+.services-page{
+    padding: 1em;
+}
+.services-title{
+    font-family: sans-serif;
+}
+.services-list{
+    columns: 2;
+    text-align: center;
+}
+.services-list > li{
+    line-height: 2;
+}
+.call-button{
+    padding: 1.5em;
+    border-radius: 40px;
+    background-color: #2959b8;
+    color: white;
+    box-shadow: 0 0 9px 3px blue;
+}

@@ -7,7 +7,7 @@
 //     return result
 // }
 
-// console.log(total(numbers))
+console.log(total(numbers))
 
 // 2) Turn an array of numbers into a long string of all those numbers.
 // const numbers = [1, 2, 3]

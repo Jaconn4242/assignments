@@ -19,6 +19,9 @@ function App() {
             <Route path="/about" element={<About />}/>
             <Route path="/services" element={<Services />}/>
         </Routes>
+        <footer className="Footer-container">
+            <small className="Footer-description">Conn's Coding 2022, All Rights Reserved</small>
+        </footer>
     </Router>
   )
 }

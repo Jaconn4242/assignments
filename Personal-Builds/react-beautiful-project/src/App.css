@@ -1,0 +1,9 @@
+ul{
+  width: 300px;
+  margin: auto;
+}
+li{
+  box-shadow: 0 2px 5px;
+  padding: 1em;
+  margin: 1em;
+}
