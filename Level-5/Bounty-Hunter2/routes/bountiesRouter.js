@@ -48,6 +48,23 @@ bountiesRouter.get("/search/type", (req, res) => {
     res.send(filteredType)
 })
 
+// DELETE Request
+bountiesRouter.delete("/:bountyId", (req, res, next) =>{
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounties.findIndex(bounty => bounty._Id === bountyId)
+    bounties.splice(bountyIndex, 1)
+    res.send("Deleted Successfully!")
+})
+
+// PUT Request
+bountiesRouter.put("/:bountyId", (req, res, next) => {
+    const bountyId = req.params.bountyId
+    const update = req.body
+    const bountyIndex = bounties.findIndex(bounty => bounty._Id === bountyId)
+    const updatedBounty = Object.assign(bounties[bountyIndex], update)
+    res.send(updatedBounty)
+})
+
     
 
 
