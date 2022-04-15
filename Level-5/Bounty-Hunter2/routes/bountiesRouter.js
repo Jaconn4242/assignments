@@ -30,7 +30,7 @@ bountiesRouter.post("/", (req,res) => {
         const newBounty = req.body
         newBounty._id = uuidv4()
         bounties.push(newBounty)
-        res.send(`Successfully added ${newBounty.firstName} to the database!`)
+        res.send(newBounty)
     })
 
 // GET request by Id **
