@@ -7,7 +7,7 @@ function BountyForm(props) {
     const initInput = {
                         firstName: "",
                         lastName: "",
-                        living: "",
+                        isLiving: "",
                         bountyAmount: "",
                         type: ""
                     }
@@ -28,7 +28,6 @@ function BountyForm(props) {
   return (
     <div className="form-container">
     <h1 className="form-title">Bounty Hunter</h1>
-    <img src="./bounty-hunter-img.png" alt="" className='bounty-hunter-img' />
     <form className="form-wrapper"onSubmit={handleSubmit}>
         <input type="text" 
                name='firstName' 
@@ -44,13 +43,13 @@ function BountyForm(props) {
                placeholder="Last Name" 
                className='form-input'
         />
-        <input type="text" 
-               name='living' 
-               value={input.living} 
-               onChange={onChange} 
-               placeholder="Living" 
-               className='form-input'
-        />
+        <select name="isLiving" 
+                className='form-input form-select'
+                onChange={onChange}>
+            <option>Choose Living Status</option>
+            <option value="true">Alive</option>
+            <option value="false">Dead</option>
+        </select>
         <input type="text" 
                name='bountyAmount' 
                value={input.bountyAmount} 
@@ -58,13 +57,13 @@ function BountyForm(props) {
                placeholder="Bounty Amount" 
                className='form-input'
         />
-        <input type="text" 
-               name='type' 
-               value={input.type} 
-               onChange={onChange} 
-               placeholder="type" 
-               className='form-input'
-        />
+        <select name="type" 
+                className='form-input form-select'
+                onChange={onChange}>
+            <option>Choose Type</option>
+            <option value="sith">Sith</option>
+            <option value="jedi">Jedi</option>
+        </select>
         <button className='add-btn'>Add Bounty</button>
     </form>
     </div>

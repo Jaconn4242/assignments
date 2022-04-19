@@ -1,20 +1,17 @@
 .form-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 3em 3em 3em;
-    gap: 1em
+    margin: auto
 }
 .form-title{
-    grid-column: 1 / 3;
     text-align: center;
-    margin-bottom: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .bounty-hunter-img{
-    width: 100%
+    width: 90%;
+    height: 53.5%;
+    border: 2px solid darkgray;
+    margin-left: auto;
 }
 .form-wrapper{
-    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,6 +19,11 @@
     border: 2px solid black;
     padding: 1em;
     background-color: rgb(89, 88, 88);
+    width: 50%;
+    height: fit-content;
+    border: 2px solid darkgray;
+    margin: auto;
+    border-radius: 15px;
 }
 .form-input{
     border: 1px solid black;
@@ -29,7 +31,11 @@
     width: 50%;
     background-color: black;
     border: 1px solid darkgray;
-    color: white
+    color: white;
+    margin: auto;
+}
+.form-select{
+    width: 56%;
 }
 .form-input::placeholder{
     color: white

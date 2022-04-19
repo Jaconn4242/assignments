@@ -1,3 +1,33 @@
 .App{
     background-color: rgb(73, 68, 57);
+    border: 2px solid red;
+}
+.filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid darkgray;
+    background-color: rgb(89, 88, 88);
+    border-radius: 10px;
+    width: 86%;
+    margin: 1em auto 0px auto;
+}
+ h4{
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+.filter-by-type{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: black;
+    color: white;
+}
+
+.filter-by-living{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: black;
+    color: white;
 }

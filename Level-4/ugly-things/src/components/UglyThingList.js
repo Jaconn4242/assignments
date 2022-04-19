@@ -26,10 +26,12 @@ function UglyThingList(props) {
       description: newInput.description
     }
     axios.put(`https://api.vschool.io/Jeff/thing/${id}`, updates)
-        .then(res => console.log(res.data))
+        .then(res => {
+          console.log(res.data)
+          setThingList(prevState => prevState.map(thing => (thing._id === id ? 
+            {...thing, title: newInput.title, description: newInput.description} : thing )))
+        })
         .catch(err => console.log(err))
-    setThingList(prevState => prevState.map(thing => (thing._id === id ? 
-      {...thing, title: newInput.title, description: newInput.description} : thing )))
   }
   
   // MAPS THROUGH THINGlIST AND PASSES PROPS

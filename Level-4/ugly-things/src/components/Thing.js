@@ -31,7 +31,7 @@ function Thing(props) {
 
     function updateThing(e) {
       e.preventDefault()
-      handleEdit(props._id, newInput.firstName)
+      handleEdit(props._id, newInput)
       setEditing(false)
     }
     console.log(`New Input:`, newInput)
