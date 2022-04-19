@@ -35,7 +35,13 @@
     margin: auto;
 }
 .form-select{
+    border: 1px solid black;
+    padding: 10px;
     width: 56%;
+    background-color: black;
+    border: 1px solid darkgray;
+    color: white;
+    margin: auto;
 }
 .form-input::placeholder{
     color: white

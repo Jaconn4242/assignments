@@ -44,7 +44,7 @@ function BountyForm(props) {
                className='form-input'
         />
         <select name="isLiving" 
-                className='form-input form-select'
+                className='form-select'
                 onChange={onChange}>
             <option>Choose Living Status</option>
             <option value="true">Alive</option>
@@ -58,7 +58,7 @@ function BountyForm(props) {
                className='form-input'
         />
         <select name="type" 
-                className='form-input form-select'
+                className='form-select'
                 onChange={onChange}>
             <option>Choose Type</option>
             <option value="sith">Sith</option>
