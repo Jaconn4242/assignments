@@ -6,7 +6,7 @@ body {
 
 .Header--main-container{
   height: 75vh;
-  background-image: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Ym9vayUyMGRlc2slMjBhbmQlMjBwaG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60);
+  background-image: url("./coolfinal.png");
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -15,6 +15,8 @@ body {
   text-align: center;
   color:#FFFFFF
 }
+
+/* public\coolphoto.jpg */
 .Header--main-title{
   font-size: 80px;
   margin-top: 3em;

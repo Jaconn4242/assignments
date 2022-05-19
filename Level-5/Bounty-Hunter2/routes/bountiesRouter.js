@@ -5,7 +5,7 @@ const bounty = require("../models/bounty.js")
 const Bounty = require("../models/bounty.js")
 // const {v4: uuidv4} = require('uuid')
 
-
+// this is a hardcoded database that i commented out because once I was taught mongo database it replaced this
 // const bounties = [
 //     {
 //         firstName: "Victor",
@@ -27,6 +27,10 @@ const Bounty = require("../models/bounty.js")
 // GET REQUEST
 bountiesRouter.get("/", (req,res,next) => {
     Bounty.find((err, bounties) => {
+        // express has easier methods of getting data which is a few lessons ahead but .find here is one of those.
+        // when it runs the request, if there's an err than it send an internal error to postman(the res.status) 500 then
+        // return the error by passing it through the global next function in our server.js as an argument.
+        // if there is no error then we set the internal response to 200(successful) and send ourselves(.send) the bounties
         if(err){
             res.status(500)
             return next(err)

@@ -20,6 +20,7 @@ app.use("/bounties", require("./routes/bountiesRouter.js"))
 app.use((err, req, res, next) => {
     console.log(err)
     return res.send({errMsg: err.message})
+    // This function is the same syntax for every project
 })
 
 
