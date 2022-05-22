@@ -12,7 +12,7 @@ app.use(morgan("dev"))
 app.use(express.json())
 
 // Connection to db
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@userdata.w1lgk.mongodb.net/?retryWrites=true&w=majority`, (err) => {
+mongoose.connect(`mongodb+srv://jaconn4242:helloworld@userdata.w1lgk.mongodb.net/?retryWrites=true&w=majority`, (err) => {
     if(err) throw err
     console.log("Connected to Database")
 })
