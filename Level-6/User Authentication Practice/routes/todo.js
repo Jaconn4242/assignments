@@ -24,7 +24,7 @@ todoRouter.get("/user", (req,res,next) => {
         return res.status(200).send(todos)
     })
 })
-
+// post a new todo
 todoRouter.post("/", (req, res, next) => {
     req.body.user = req.auth._id
     const todo = new Todo(req.body);
@@ -36,7 +36,7 @@ todoRouter.post("/", (req, res, next) => {
         return res.status(201).send(newTodo);
     });
 });
-
+// get todo by todoId
 todoRouter.get("/:todoId", (req, res, next) => {
     Todo.findById(req.params.todoId, (err, todo) => {
         if (err) {
@@ -49,7 +49,7 @@ todoRouter.get("/:todoId", (req, res, next) => {
         return res.send(todo);
     });
 });
-
+// update a todo
 todoRouter.put("/:todoId", (req, res, next) => {
     Todo.findOneAndUpdate(
         {_id: req.params.todoId, user: req.auth._id},

@@ -24,20 +24,22 @@ const aircraftSchema = new Schema({
         type: String,
         required: true
     },
-    upvote:{
-        type: Boolean,
-        default: false
+    upvotes:{
+        type: Number,
+        default: 0
     },
-    downvote:{
-        type: Boolean,
-        default: false
+    downvotes:{
+        type: Number,
+        default: 0
     },
+    voter: [{
+        type: String
+    }],
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
     }
-
 })
 
 module.exports = mongoose.model("Aircraft", aircraftSchema)

@@ -18,7 +18,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", jwt({secret: process.env.SECRET, algorithms: ["HS256"]}))
 app.use("/api/aircraft", require("./routes/aircraftRouter.js"))
-app.use("/api/comment", require("./routes/commentRouter.js"))
+app.use("/api/aircraft/comments", require("./routes/commentRouter.js"))
 
 
 // Global error handler
@@ -30,6 +30,6 @@ app.use((err,req,res,next) => {
     return res.send({message: err.message})
 })
 // Server listening
-app.listen(process.env.MY_VAR, ()=> {
+app.listen(process.env.MY_VAR, () => {
     console.log("Application server is running")
 })
