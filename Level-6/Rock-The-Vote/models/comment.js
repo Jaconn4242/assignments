@@ -7,7 +7,8 @@ const commentSchema = new Schema({
     },
     aircraft: {
         type: Schema.Types.ObjectId,
-        ref: "Aircraft"
+        ref: "Aircraft",
+        required: true
     },
     user: {
         type: Schema.Types.ObjectId,
