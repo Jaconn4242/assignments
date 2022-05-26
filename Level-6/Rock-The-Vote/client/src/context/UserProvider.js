@@ -15,7 +15,8 @@ export default function UserProvider(props){
   const initState = { 
     user: JSON.parse(localStorage.getItem("user")) || {}, 
     token: localStorage.getItem("token") || "", 
-    aircraft: [] 
+    aircraft: [],
+    errMsg: ""
   }
 
   const [userState, setUserState] = useState(initState)
@@ -32,7 +33,7 @@ export default function UserProvider(props){
           token
         }))
       })
-      .catch(err => console.log(err.response.data.errMsg))
+      .catch(err => handleAuthError(err.response.data.errMsg))
   }
 
   function login(credentials){
@@ -48,7 +49,7 @@ export default function UserProvider(props){
           token
         }))
       })
-      .catch(err => console.log(err.response.data.errMsg))
+      .catch(err => handleAuthError(err.response.data.errMsg))
   }
 
   function logout(){
@@ -59,6 +60,20 @@ export default function UserProvider(props){
       token: "",
       aircraft: []
     })
+  }
+
+  function handleAuthError(errMsg){
+    setUserState(prevState => ({
+      ...prevState,
+      errMsg
+    }))
+  }
+
+  function resetAuthErr(){
+    setUserState(prevState => ({
+      ...prevState,
+      errMsg: ""
+    }))
   }
 
   function getUserAircraft(){
@@ -83,6 +98,10 @@ export default function UserProvider(props){
       .catch(err => console.log(err.response.data.errMsg))
   }
 
+  function getComments(){
+    userAxios.get("/api/aircraft/comments")
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -90,7 +109,8 @@ export default function UserProvider(props){
         signup,
         login,
         logout,
-        addAircraft
+        addAircraft,
+        resetAuthErr
       }}>
       { props.children }
     </UserContext.Provider>

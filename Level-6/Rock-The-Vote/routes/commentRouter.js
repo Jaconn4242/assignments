@@ -2,7 +2,7 @@ const express = require("express")
 const commentRouter = express.Router()
 const Comment = require("../models/comment.js")
 
-// Get all comments to issue by issue ID
+// Get all aircraft comments by aircraft ID
 commentRouter.get('/:aircraftId/comments', (req, res, next) => {
     Comment.find({ aircraft: req.params.aircraftId }, (err, comments) => {
       if (err) {
@@ -13,7 +13,7 @@ commentRouter.get('/:aircraftId/comments', (req, res, next) => {
     });
   });
 
-  // Add comment to issue by issue ID
+  // Add comment to aircraft by aircraft ID
 commentRouter.post('/:aircraftId/comments', (req, res, next) => {
     req.body.user = req.auth._id; //find user posting comment and make that equal to the user property in comment schema
     req.body.aircraft = req.params.aircraftId;
