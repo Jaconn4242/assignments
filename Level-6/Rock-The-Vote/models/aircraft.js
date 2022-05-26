@@ -24,17 +24,18 @@ const aircraftSchema = new Schema({
         type: String,
         required: true
     },
-    upvotes:{
-        type: Number,
-        default: 0
+    upVotes: [{
+        type: Schema.Types.ObjectId,
+         ref: 'User'
+        }],
+    downVotes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+        }],
+    date: {
+        type: Date,
+        default: Date.now
     },
-    downvotes:{
-        type: Number,
-        default: 0
-    },
-    voter: [{
-        type: String
-    }],
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

@@ -1,0 +1,24 @@
+.aicraft-form-wrapper{
+    border: 2px solid black;
+    padding: 2em;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.aircraft-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.aircraft-form-container h3{
+    margin: 0;
+}
+.aircraft-form-container input{
+    padding: .25em;
+    padding: 1em;
+}
+.aircraft-form-container button{
+    width: 30%;
+    padding: .5em;
+    border-radius: 7px;
+}

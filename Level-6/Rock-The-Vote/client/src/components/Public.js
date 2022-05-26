@@ -1,6 +1,6 @@
 import React from 'react'
-import TodoList from './TodoList.js'
-import Todo from './Todo.js'
+import AircraftList from './AircraftList.js'
+import Aircraft from './Aircraft.js'
 
 export default function Public(){
   return (

@@ -15,7 +15,7 @@ export default function UserProvider(props){
   const initState = { 
     user: JSON.parse(localStorage.getItem("user")) || {}, 
     token: localStorage.getItem("token") || "", 
-    todos: [] 
+    aircraft: [] 
   }
 
   const [userState, setUserState] = useState(initState)
@@ -41,7 +41,7 @@ export default function UserProvider(props){
         const { user, token } = res.data
         localStorage.setItem("token", token)
         localStorage.setItem("user", JSON.stringify(user))
-        getUserTodos()
+        getUserAircraft()
         setUserState(prevUserState => ({
           ...prevUserState,
           user,
@@ -57,27 +57,27 @@ export default function UserProvider(props){
     setUserState({
       user: {},
       token: "",
-      todos: []
+      aircraft: []
     })
   }
 
-  function getUserTodos(){
-    userAxios.get("/api/todo/user")
+  function getUserAircraft(){
+    userAxios.get("/api/aircraft/user")
       .then(res => {
         setUserState(prevState => ({
           ...prevState,
-          todos: res.data
+          aircraft: res.data
         }))
       })
       .catch(err => console.log(err.response.data.errMsg))
   }
 
-  function addTodo(newTodo){
-    userAxios.post("/api/todo", newTodo)
+  function addAircraft(newAircraft){
+    userAxios.post("/api/aircraft", newAircraft)
       .then(res => {
         setUserState(prevState => ({
           ...prevState,
-          todos: [...prevState.todos, res.data]
+          aircraft: [...prevState.aircraft, res.data]
         }))
       })
       .catch(err => console.log(err.response.data.errMsg))
@@ -90,7 +90,7 @@ export default function UserProvider(props){
         signup,
         login,
         logout,
-        addTodo
+        addAircraft
       }}>
       { props.children }
     </UserContext.Provider>

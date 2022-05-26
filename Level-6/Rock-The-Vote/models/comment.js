@@ -5,6 +5,10 @@ const commentSchema = new Schema({
     comment: {
         type: String,
     },
+    date: {
+        type: Date,
+        default: Date.now
+    },
     aircraft: {
         type: Schema.Types.ObjectId,
         ref: "Aircraft",
@@ -14,14 +18,6 @@ const commentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
-    },
-    upvotes: {
-        type: Number,
-        default: 0
-    },
-    downvotes: {
-        type: Number,
-        default: 0
     }
 })
 

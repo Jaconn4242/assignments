@@ -27,9 +27,9 @@ app.use((err,req,res,next) => {
     if(err.name === "UnauthorizedError"){
         res.status(err.status)
     }
-    return res.send({message: err.message})
+    return res.send({errMsg: err.message})
 })
 // Server listening
-app.listen(process.env.MY_VAR, () => {
+app.listen(process.env.MY_VAR || 7000, () => {
     console.log("Application server is running")
 })

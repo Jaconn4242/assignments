@@ -1,0 +1,16 @@
+  .auth-container{
+    background: linear-gradient(360deg, white, blue);
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    box-shadow: 0 2px 5px;
+    border-radius: 10px;
+    margin-top: 20%;
+  }
+  .auth-container input{
+    text-decoration: none;
+    background-color: whitesmoke;
+    padding: .5em;
+    margin: 5px;
+    border-radius: 7px;
+  }
