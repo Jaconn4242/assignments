@@ -20,6 +20,7 @@ export default function UserProvider(props){
   }
 
   const [userState, setUserState] = useState(initState)
+  const [allAircraft, setAllAircraft]= useState([])
 
   function signup(credentials){
     axios.post("/auth/signup", credentials)
@@ -75,6 +76,11 @@ export default function UserProvider(props){
       errMsg: ""
     }))
   }
+  function getAllAircraft(){
+    userAxios.get("/api/aircraft")
+      .then(res => setAllAircraft(res.data))
+      .catch(err => console.log(err.response.data.errMsg))
+  }
 
   function getUserAircraft(){
     userAxios.get("/api/aircraft/user")
@@ -98,6 +104,7 @@ export default function UserProvider(props){
       .catch(err => console.log(err.response.data.errMsg))
   }
 
+  //eslint-disable-next-line
   function getComments(){
     userAxios.get("/api/aircraft/comments")
   }
@@ -110,7 +117,9 @@ export default function UserProvider(props){
         login,
         logout,
         addAircraft,
-        resetAuthErr
+        resetAuthErr,
+        getAllAircraft,
+        allAircraft,
       }}>
       { props.children }
     </UserContext.Provider>

@@ -6,7 +6,6 @@ export default function Navbar(props){
 
   const navigate = useNavigate()
   const { logout,token } = props
-  console.log("token",token)
   return (
     <>
     {token && <div className="navbar">
