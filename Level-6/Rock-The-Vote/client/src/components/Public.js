@@ -25,7 +25,7 @@ export default function Public(){
             <p className='description'>{`Description: ${description}`}</p>
             <img src={imgUrl} className="post-image" alt=""/>
             <button>{`Likes: ${upVotes.length}`}</button>
-            <button>{`Dislikes: ${upVotes.length}`}</button>
+            <button>{`Dislikes: ${downVotes.length}`}</button>
           </div>
         )
       })}
