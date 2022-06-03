@@ -1,41 +1,90 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../context/UserProvider.js'
+import ThumbDown from "../images/ThumbDown.png"
+import ThumbUp from "../images/ThumbUp.png"
 import "../styles/Aircraft.css"
 
 export default function Aircraft(props){
 
-  const {getAircraftComments, aircraftComments} = useContext(UserContext)
+  const { getUserAircraft, userAxios} = useContext(UserContext)
   const [showComments, setShowComments] = useState(false)
   const [displayAddition, setDisplayAddition] = useState(false)
-  const { year,
+  const [inputs, setInputs] = useState({comment: ""})
+  const [aircraftComments, setAircraftComments]= useState([])
+
+  const { 
+    year,
     make,
     model,
     description,
     imgUrl,
-    _id
+    upVotes,
+    downVotes,
+    _id,
+    deleteUserAircraft
   } = props
-  
+
+  function newGetComments(aircraftId){
+     userAxios.get(`api/aircraft/comments/${aircraftId}/comments`)
+  .then(res => setAircraftComments(res.data))
+  .catch(err => console.log(err.response.data.errMsg))
+  }
+
+  function addAircraftComment(aircraftId, newComment){
+    userAxios.post(`api/aircraft/comments/${aircraftId}/comments`, newComment)
+    .then(res => setAircraftComments(prevState => [...prevState, res.data]))
+    .catch(err => console.log(err.response.data.errMsg))
+  }
+ 
   useEffect(()=> {
-    getAircraftComments(_id)
+    newGetComments(_id)
+    getUserAircraft(_id)
+    // eslint-disable-next-line
   }, [])
 
-
-console.log(aircraftComments)
-  console.log(_id)
+  function onChange(e) {
+    const {name, value} = e.target
+    setInputs(prevState => ({...prevState, [name]: value}))
+  }
+  function commentSubmission(e) {
+    e.preventDefault()
+    addAircraftComment(_id, inputs)
+  }
+  function deleteAircraft(){
+    deleteUserAircraft(_id)
+    getUserAircraft(_id)
+  }
+// console.log(aircraftComments)
   return (
     <div className="airplane">
-      <h1 className='aircraft-title'>{year}{make}{model}</h1>
+      <span className='delete-button' onClick={deleteAircraft}>Delete</span>
+      <h1 className='aircraft-title'>{year} {make} {model}</h1>
       <img className='aircraft-image' src={imgUrl} alt={imgUrl}/>
       <h3>{ description }</h3>
-      <div>
-      <button onClick={() => setShowComments(!showComments)}>show comments</button>
-      </div>
+        <div className='ratings-container'>
+          <p><img src={ThumbUp} alt="" />{`Likes:${upVotes.length}`}</p>
+          <p><img src={ThumbDown} alt="" />{`Dislikes:${downVotes.length}`}</p>
+        </div>
+      {!showComments ?<button onClick={() => setShowComments(!showComments)}>show comments</button>:
+      <button onClick={() => setShowComments(!showComments)}>collapse comments</button>}
       {showComments ? <div>
       {aircraftComments.map(comment => {
         return <div key={comment._id} className="comment">{comment.comment}</div>
       })}
+
       <span  onClick={()=> setDisplayAddition(!displayAddition)} >Add Comment</span>
-      {displayAddition ? <textarea  cols="30" rows="3"></textarea>: null}
+      {displayAddition ? 
+        <form onSubmit={commentSubmission}>
+          <input  
+          type="text"
+          name="comment"
+          onChange={onChange}
+          value={inputs.comment}
+          placeholder="Enter Comment"
+          />
+          <button>Submit Comment</button>
+        </form>: null}
+
       </div> : null}
     </div>
   )

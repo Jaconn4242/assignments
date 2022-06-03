@@ -32,6 +32,10 @@ const aircraftSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
         }],
+    // comments: [{
+    //     type: Object,
+    //     ref: "Comment"
+    // }],
     date: {
         type: Date,
         default: Date.now

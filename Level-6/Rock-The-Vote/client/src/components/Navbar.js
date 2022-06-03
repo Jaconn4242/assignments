@@ -9,8 +9,8 @@ export default function Navbar(props){
   return (
     <>
     {token && <div className="navbar">
-      <NavLink to="/profile">Profile</NavLink>
-      <NavLink to="/public">Public</NavLink>
+      <NavLink to="/profile" activeClassName="selected">Profile</NavLink>
+      <NavLink to="/public" activeClassName="selected">Public</NavLink>
       <button onClick={()=> {
         navigate(-1)
         logout()

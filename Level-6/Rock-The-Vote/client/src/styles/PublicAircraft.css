@@ -1,0 +1,47 @@
+.public-aircraft-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 1em;
+    border: 2px solid black;
+    box-shadow: 0 2px 5px 5px;
+    background: rgba(200, 150, 100, 0.5);
+    padding: .5em
+}
+.public-aircraft-container:first-child{
+    margin-top: 3em;
+}
+.public-aircraft-title{
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.comment-title{
+    margin-bottom: 0px;
+}
+.public-comment{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1em 5px .5em 5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    text-indent: 5px;
+}
+.public-comment-user{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.img-desc-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.img-desc-wrapper p{
+    background-color: lightblue;
+    border-radius: 9px;
+    padding: .5em;
+    width: 100%;
+    margin: 0 10px 0 10px;
+}
+.add-comment{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 5px 1em 5px;
+}

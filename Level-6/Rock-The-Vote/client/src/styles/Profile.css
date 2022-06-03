@@ -1,0 +1,18 @@
+.aircraft-list-container{
+    background: rgba(26, 180, 219, 0.7);
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1em;
+    width: 90%;
+    margin: auto;
+}
+.list-title{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(26, 180, 219, 0.7);
+    margin-bottom: 0px;
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 20px;
+}

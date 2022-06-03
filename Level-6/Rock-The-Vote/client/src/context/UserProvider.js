@@ -21,7 +21,7 @@ export default function UserProvider(props){
 
   const [userState, setUserState] = useState(initState)
   const [allAircraft, setAllAircraft]= useState([])
-  const [aircraftComments, setAircraftComments]= useState([])
+ 
 
   function signup(credentials){
     axios.post("/auth/signup", credentials)
@@ -104,12 +104,23 @@ export default function UserProvider(props){
       })
       .catch(err => console.log(err.response.data.errMsg))
   }
-
-  function getAircraftComments(aircraftId){
-    userAxios.get(`api/aircraft/comments/${aircraftId}/comments`)
-    .then(res => setAircraftComments(res.data))
+  function deleteUserAircraft(aircraftId){
+    userAxios.delete(`/api/aircraft/${aircraftId}`)
+    .then(res => console.log(res))
     .catch(err => console.log(err.response.data.errMsg))
   }
+
+  // function getAircraftComments(aircraftId){
+  //   userAxios.get(`api/aircraft/comments/${aircraftId}/comments`)
+  //   .then(res => setAircraftComments(res.data))
+  //   .catch(err => console.log(err.response.data.errMsg))
+  // }
+
+  // function addAircraftComment(aircraftId, newComment){
+  //   userAxios.post(`api/aircraft/comments/${aircraftId}/comments`, newComment)
+  //   .then(res => setAircraftComments(prevState => [...prevState, res.data]))
+  //   .catch(err => console.log(err.response.data.errMsg))
+  // }
 
   //eslint-disable-next-line
  
@@ -117,6 +128,8 @@ export default function UserProvider(props){
   return (
     <UserContext.Provider
       value={{
+        userAxios,
+        allAircraft,
         ...userState,
         signup,
         login,
@@ -124,9 +137,8 @@ export default function UserProvider(props){
         addAircraft,
         resetAuthErr,
         getAllAircraft,
-        getAircraftComments,
-        aircraftComments,
-        allAircraft,
+        getUserAircraft,
+        deleteUserAircraft
       }}>
       { props.children }
     </UserContext.Provider>

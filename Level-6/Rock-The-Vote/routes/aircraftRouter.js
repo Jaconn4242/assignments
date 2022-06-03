@@ -76,6 +76,10 @@ aircraftRouter.delete("/:aircraftId", (req, res, next) => {
     })
 })
 
+// add to set, 2 and 1 fuction create http request.
+//put request updating model
+
+
 
 
 
