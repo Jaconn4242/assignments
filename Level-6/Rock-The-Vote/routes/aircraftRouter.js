@@ -75,6 +75,53 @@ aircraftRouter.delete("/:aircraftId", (req, res, next) => {
         return res.status(200).send(`Successfully deleted the ${deletedAircraft.model}`)
     })
 })
+//upvotes request
+aircraftRouter.put("/:aircraftId/upvote", (req, res, next) => {
+    Aircraft.findOneAndUpdate(
+        {_id: req.params.aircraftId},
+        { $pull: {downVotes: req.user._id}, $addToSet: {upVotes: req.user._id}},
+        {new: true},
+        (err, updatedAircraft) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(updatedAircraft)
+        }
+    );
+});
+
+//downvote request
+aircraftRouter.put("/:aircraftId/downvote", (req, res, next) => {
+    Aircraft.findOneAndUpdate(
+        {_id: req.params.aircraftId},
+        { $pull: {upVotes: req.user._id}, $addToSet: {downVotes: req.user._id}},
+        {new: true},
+        (err, updatedAircraft) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(updatedAircraft)
+        }
+    );
+});
+
+//delete vote
+aircraftRouter.put("/:aircraftId/retract", (req, res, next) => {
+    Aircraft.findOneAndUpdate(
+        {_id: req.params.issueId},
+        { $pull: {upVotes: req.user._id, downVotes: req.user._id}},
+        {new: true},
+        (err, updatedAircraft) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(updatedAircraft)
+        }
+    );
+});
 
 // add to set, 2 and 1 fuction create http request.
 //put request updating model

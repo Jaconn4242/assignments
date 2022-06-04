@@ -6,7 +6,8 @@
     border: 2px solid black;
     box-shadow: 0 2px 5px 5px;
     background: rgba(200, 150, 100, 0.5);
-    padding: .5em
+    padding: .5em;
+    position: relative;
 }
 .public-aircraft-container:first-child{
     margin-top: 3em;
@@ -19,6 +20,14 @@
 }
 .comment-title{
     margin-bottom: 0px;
+    width: fit-content;
+    padding: .25em;
+    font-size: 16px;
+}
+.comment-title:hover{
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: .25em;
 }
 .public-comment{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

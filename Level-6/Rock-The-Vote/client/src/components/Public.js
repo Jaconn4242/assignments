@@ -5,10 +5,10 @@ import PublicAircraft from './PublicAircraft'
 
 export default function Public(){
 
-  const { getAllAircraft, allAircraft} = useContext(UserContext)
+  const { getAllAircraft, allAircraft, user} = useContext(UserContext)
 
   const aircraftElements = allAircraft.map(aircraft => {
-    return <PublicAircraft key={aircraft._id} {...aircraft}/>
+    return <PublicAircraft key={aircraft._id} {...aircraft} user={user}/>
     })
 
     useEffect(()=> {
