@@ -76,10 +76,16 @@ aircraftRouter.delete("/:aircraftId", (req, res, next) => {
     })
 })
 //upvotes request
+//VScode DEBUG
+//place where the code stops executing(javascript node engine stops/bookmark)
+//When it breaks I have access to all variables variables and scopes(all inspectable)
+//WATCH SECTION
+//stepover- evaluate fine tune expression
+//updatedAircraft.toObject().upVotes[0].toString()
 aircraftRouter.put("/:aircraftId/upvote", (req, res, next) => {
     Aircraft.findOneAndUpdate(
         {_id: req.params.aircraftId},
-        { $pull: {downVotes: req.user._id}, $addToSet: {upVotes: req.user._id}},
+        { $pull: {downVotes: req.auth._id}, $addToSet: {upVotes: req.auth._id}},
         {new: true},
         (err, updatedAircraft) => {
             if(err){
