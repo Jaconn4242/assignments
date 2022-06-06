@@ -101,7 +101,7 @@ aircraftRouter.put("/:aircraftId/upvote", (req, res, next) => {
 aircraftRouter.put("/:aircraftId/downvote", (req, res, next) => {
     Aircraft.findOneAndUpdate(
         {_id: req.params.aircraftId},
-        { $pull: {upVotes: req.user._id}, $addToSet: {downVotes: req.user._id}},
+        { $pull: {upVotes: req.auth._id}, $addToSet: {downVotes: req.auth._id}},
         {new: true},
         (err, updatedAircraft) => {
             if(err){
@@ -116,8 +116,8 @@ aircraftRouter.put("/:aircraftId/downvote", (req, res, next) => {
 //delete vote
 aircraftRouter.put("/:aircraftId/retract", (req, res, next) => {
     Aircraft.findOneAndUpdate(
-        {_id: req.params.issueId},
-        { $pull: {upVotes: req.user._id, downVotes: req.user._id}},
+        {_id: req.params.aircraftId},
+        { $pull: {upVotes: req.auth._id, downVotes: req.auth._id}},
         {new: true},
         (err, updatedAircraft) => {
             if(err){

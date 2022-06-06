@@ -37,22 +37,47 @@ function PublicAircraft(props) {
 
       function handleUpVote(e){
           e.preventDefault()
+          if(upVotes.includes(user._id)){
+            handleRetractVote(_id)
+          } else {
         const good = _id
-
         userAxios.put(`api/aircraft/${good}/upvote`)
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
-        console.log(good)
       }
+    }
+      
+      function handleDownVote(e){
+        e.preventDefault()
+        if(downVotes.includes(user._id)){
+          handleRetractVote(_id)
+        } 
+      const good = _id
+      console.log("clicked")
+      userAxios.put(`api/aircraft/${good}/downvote`)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err))
+    }
+
+    function handleRetractVote(_id){
+    const good = _id
+    userAxios.put(`api/aircraft/${good}/retract`)
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err))
+  }
+
+
 
     useEffect(()=> {
         newGetComments(_id)
         getUserAircraft(_id)
         // eslint-disable-next-line 
     }, [])
+
+    
   return (
     <div className='public-aircraft-container'>
-        <p>{}</p>
+        <p>{user}</p>
             <p className='public-aircraft-title'>{year} {make} {model}</p>
             <div className='img-desc-wrapper'>
                 <img src={imgUrl} alt="" width={215} height={150} />
@@ -60,7 +85,7 @@ function PublicAircraft(props) {
             </div>
             <div className='ratings-container'>
                 <p onClick={handleUpVote} ><img src={ThumbUp} alt="" />{`Likes:${upVotes.length}`}</p>
-                <p><img src={ThumbDown} alt="" />{`Dislikes:${downVotes.length}`}</p>
+                <p onClick={handleDownVote}><img src={ThumbDown} alt="" />{`Dislikes:${downVotes.length}`}</p>
             </div>
             {!showComments ?
             <h5 className='comment-title' onClick={() => setShowComments(!showComments)}>show comments</h5>:
