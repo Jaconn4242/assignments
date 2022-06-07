@@ -17,6 +17,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 //Routes
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", jwt({secret: process.env.SECRET, algorithms: ["HS256"]}))
+app.use("/api/baby", require("./routes/babyRouter.js"))
 // Global Error Handler
 app.use((err,req,res,next) => {
     console.log(err)

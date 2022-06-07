@@ -1,0 +1,3 @@
+This App is created to help parents keep track of their babies feeding schedule and monitor their babies growth patterns.  
+It also allows you to view commonly asked questions from new parents and how topics of discussion can closely align with you and your babies progress.
+With this App, the ultimate goal is to help new parents stay organized and have peice of mind when faced with many obstacles or instances where their babies health and overall wellness is at question.
