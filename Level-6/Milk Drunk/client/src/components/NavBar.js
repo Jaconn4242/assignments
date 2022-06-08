@@ -7,7 +7,8 @@ function NavBar(props) {
    
     const navigate = useNavigate()
   return (
-     <div className='navbar-container'>
+    <>
+     {token && <div className='navbar-container'>
         <li>Home</li>
         <li>News</li>
         <li>Products</li>
@@ -17,7 +18,8 @@ function NavBar(props) {
             navigate("/")
         }
         }>Logout</li>
-    </div>
+    </div>}
+    </>
   )
 }
 

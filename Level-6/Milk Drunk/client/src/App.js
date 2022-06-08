@@ -8,6 +8,8 @@ import Auth from './components/Auth';
 import ErrorPage from './components/ErrorPage';
 import Public from './components/Public';
 import './styles/App.css';
+import Greeting from './components/Greeting';
+import Footer from './components/Footer';
 
 function App() {
   const {token, logout} = useContext(MainContext)
@@ -17,11 +19,16 @@ function App() {
     <Routes>
       <Route 
         path="/" 
-        element={token ? <Navigate to="/profile"/>: <Auth />}
+        element= {token ? <Navigate to="/profile"/>:<Greeting />} 
+      />
+      <Route 
+        path="/Auth" 
+        element={token ? <Auth />: <NotMember />}
       />
       <Route 
         path="/profile"
         element={token ? <Profile />: <NotMember/>}
+       
       />
       <Route 
         path="/public"
@@ -32,6 +39,7 @@ function App() {
         element={<ErrorPage />}
       />
     </Routes>
+    <Footer />
     </div>
   );
 }

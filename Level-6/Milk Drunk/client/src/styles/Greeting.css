@@ -1,0 +1,14 @@
+/* font-family: 'Encode Sans Expanded', sans-serif;
+font-family: 'Roboto', sans-serif; */
+.slide-one{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 40%;
+}
+.swiper{
+    background: linear-gradient(250deg,pink, pink,white,purple);
+    height: 640px;
+}
+.swiper-wrapper{
+    height: 100%;
+}
