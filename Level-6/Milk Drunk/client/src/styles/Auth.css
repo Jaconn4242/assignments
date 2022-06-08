@@ -1,0 +1,7 @@
+.auth-container{
+    background: linear-gradient(  rgb(231, 124, 224), rgb(33, 103, 233));
+    height: 625px;
+}
+.auth-container h1{
+    font-size: 35px;
+}

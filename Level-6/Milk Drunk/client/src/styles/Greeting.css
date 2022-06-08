@@ -1,5 +1,7 @@
 /* font-family: 'Encode Sans Expanded', sans-serif;
 font-family: 'Roboto', sans-serif; */
+
+
 .slide-one{
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -7,8 +9,68 @@ font-family: 'Roboto', sans-serif; */
 }
 .swiper{
     background: linear-gradient(250deg,pink, pink,white,purple);
-    height: 640px;
+    height: 625px;
 }
 .swiper-wrapper{
     height: 100%;
 }
+.swipe-container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 28%;
+    margin: auto;
+    padding: .5em;
+    background-color: rgb(251, 167, 216);
+    border-radius: 15px;
+    opacity: 1;
+	animation: fadeInOpacity 1 ease-in 3s, transform 1 ease-in-out 3s
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+        transform: scale(1);
+        box-shadow: none;
+	}
+	100% {
+		opacity: 1;
+        transform: scale(1.2);
+        box-shadow: 0 2px 20px yellow;
+	}
+}
+.swipe-container img{
+    grid-column: 1 / 2;
+    margin-left: auto;
+}
+.swipe-container small{
+    margin-left: 10px;
+}
+/* Slide two */
+.slide-two{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 10%;
+}
+.slide-two ul{
+    list-style: none;
+    margin-left: 2em;
+}
+.list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background: -webkit-linear-gradient(rgb(26, 1, 218), rgb(226, 15, 212));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slide-two button{
+    background: linear-gradient(  rgb(26, 1, 218), rgb(226, 15, 212));
+    color: white;
+    padding: .5em;
+    font-family: inherit;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgb(186, 80, 98);
+}
+

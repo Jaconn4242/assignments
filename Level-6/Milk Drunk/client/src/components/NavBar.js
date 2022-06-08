@@ -9,9 +9,7 @@ function NavBar(props) {
   return (
     <>
      {token && <div className='navbar-container'>
-        <li>Home</li>
-        <li>News</li>
-        <li>Products</li>
+        <li>Community</li>
         <li>MyBaby</li>
         <li onClick={()=>{
             logout()

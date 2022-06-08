@@ -23,7 +23,8 @@ function App() {
       />
       <Route 
         path="/Auth" 
-        element={token ? <Auth />: <NotMember />}
+        // element={token ? <Auth />: <NotMember />}
+        element={<Auth />}
       />
       <Route 
         path="/profile"

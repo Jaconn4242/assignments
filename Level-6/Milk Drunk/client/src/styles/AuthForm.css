@@ -1,0 +1,28 @@
+.form-container{
+    width: 50%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10em;
+  }
+  .form-container input{
+    text-decoration: none;
+    background-color: whitesmoke;
+    padding: .5em;
+    margin: 5px;
+    border-radius: 7px;
+  }
+  .form-container p{
+    font-family: 'Roboto', sans-serif;
+}
+  .form-container button{
+    background: linear-gradient(  rgb(26, 1, 218), rgb(226, 15, 212));
+    color: white;
+    padding: .5em;
+    font-family: inherit;
+    margin-top: .5em;
+    border-radius: 10px;
+    font-weight: 500;
+
+  }
