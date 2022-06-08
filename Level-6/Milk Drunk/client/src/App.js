@@ -1,9 +1,37 @@
+import React, { useContext } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { MainContext } from './context/ContextProvider';
+import NavBar from './components/NavBar';
+import Profile from './components/Profile';
+import NotMember from './components/NotMember';
+import Auth from './components/Auth';
+import ErrorPage from './components/ErrorPage';
+import Public from './components/Public';
 import './styles/App.css';
 
 function App() {
+  const {token, logout} = useContext(MainContext)
   return (
     <div className="App">
-    This is going to be the start of something great
+    <NavBar logout={logout} token={token} />  
+    <Routes>
+      <Route 
+        path="/" 
+        element={token ? <Navigate to="/profile"/>: <Auth />}
+      />
+      <Route 
+        path="/profile"
+        element={token ? <Profile />: <NotMember/>}
+      />
+      <Route 
+        path="/public"
+        element={token ? <Public />: <NotMember/>}
+      />
+      <Route 
+        path="*"
+        element={<ErrorPage />}
+      />
+    </Routes>
     </div>
   );
 }

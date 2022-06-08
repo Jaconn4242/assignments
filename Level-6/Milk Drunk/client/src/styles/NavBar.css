@@ -1,0 +1,10 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 15px;
+}
+.navbar-container li:active{
+    background-color: red;
+}

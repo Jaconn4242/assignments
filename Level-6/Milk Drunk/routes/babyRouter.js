@@ -15,7 +15,7 @@ babyRouter.get("/", (req, res, next) => {
 })
 
 // Get all babies by parentId
-babyRouter.get("/:parent", (req, res, next) => {
+babyRouter.get("/parent", (req, res, next) => {
     Baby.find({parent: req.auth._id}, (err, babies) => {
         if(err){
             res.status(500)
