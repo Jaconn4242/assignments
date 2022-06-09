@@ -10,12 +10,12 @@ import Public from './components/Public';
 import './styles/App.css';
 import Greeting from './components/Greeting';
 import Footer from './components/Footer';
+import BabyProfile from './components/BabyProfile';
 
 function App() {
   const {token, logout} = useContext(MainContext)
   return (
-    <div className="App">
-    <NavBar logout={logout} token={token} />  
+    <div className="App"> 
     <Routes>
       <Route 
         path="/" 
@@ -23,8 +23,7 @@ function App() {
       />
       <Route 
         path="/Auth" 
-        // element={token ? <Auth />: <NotMember />}
-        element={<Auth />}
+        element={<Auth token={token}/>}
       />
       <Route 
         path="/profile"
@@ -36,11 +35,15 @@ function App() {
         element={token ? <Public />: <NotMember/>}
       />
       <Route 
+        path="/babyprofile"
+        element={token ? <BabyProfile />: <NotMember/>}
+      />
+      <Route 
         path="*"
         element={<ErrorPage />}
       />
     </Routes>
-    <Footer />
+    <NavBar logout={logout} token={token} /> 
     </div>
   );
 }

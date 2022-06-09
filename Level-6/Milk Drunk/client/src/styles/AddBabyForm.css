@@ -1,0 +1,25 @@
+.baby-form-wrapper{
+    border: 2px solid black;
+    padding: 2em;
+    width: 80%;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.baby-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.baby-form-container h3{
+    margin: 0;
+}
+.baby-form-container input{
+    padding: .25em;
+    padding: 1em;
+}
+.baby-form-container button{
+    width: 30%;
+    padding: .5em;
+    border-radius: 7px;
+}
