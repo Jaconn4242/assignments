@@ -15,9 +15,12 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
     console.log("Connected to MD-MongoDB ")
 })
 //Routes
+
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", jwt({secret: process.env.SECRET, algorithms: ["HS256"]}))
 app.use("/api/baby", require("./routes/babyRouter.js"))
+app.use("/api/baby/trackerLogs", require("./routes/trackerRouter.js"))
+
 // Global Error Handler
 app.use((err,req,res,next) => {
     console.log(err)
@@ -28,6 +31,6 @@ app.use((err,req,res,next) => {
 })
 
 // Server Listening
-app.listen(process.env.MY_VAR, ()=> {
+app.listen(process.env.MY_VAR || 9000, ()=> {
     console.log(`App is running on port ${process.env.MY_VAR}`)
 })
