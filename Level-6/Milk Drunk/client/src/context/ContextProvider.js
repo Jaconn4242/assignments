@@ -22,7 +22,6 @@ export default function ContextProvider (props) {
     const [userState, setUserState] = useState(initState)
     const [allBabies, setAllBabies] = useState([])
     //local state for baby profile pic
-    const [showBaby, setShowBaby] = useState(false)
     function signup(credentials){
         axios.post("/auth/signup", credentials)
         .then(res => {
@@ -128,8 +127,6 @@ export default function ContextProvider (props) {
             userAxios,
             allBabies,
             ...userState,
-            showBaby,
-            setShowBaby,
             signup,
             login,
             logout,

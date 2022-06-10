@@ -9,8 +9,9 @@ import ErrorPage from './components/ErrorPage';
 import Public from './components/Public';
 import './styles/App.css';
 import Greeting from './components/Greeting';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import BabyProfile from './components/BabyProfile';
+import Community from './components/Community';
 
 function App() {
   const {token, logout} = useContext(MainContext)
@@ -37,6 +38,10 @@ function App() {
       <Route 
         path="/babyprofile"
         element={token ? <BabyProfile />: <NotMember/>}
+      />
+      <Route 
+        path="/community"
+        element={token ? <Community />: <NotMember/>}
       />
       <Route 
         path="*"

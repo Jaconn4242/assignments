@@ -1,0 +1,25 @@
+.tracker-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: .5em;
+}
+.tracker-container div:first-child{
+    margin-top: 1em;
+}
+.tracker-container div:nth-child(2){
+
+}
+.tracker-container div:nth-child(3){
+
+}
+.tracker-container div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    border: 1px solid lightgrey;
+    padding: .5em;
+    border-radius: 10px;
+    
+}

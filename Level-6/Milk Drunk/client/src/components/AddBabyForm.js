@@ -24,7 +24,8 @@ export default function AddBabyForm(props) {
         e.preventDefault()
         addBaby(inputs)
         setInputs(initInputs)
-        setShowBaby(!showBaby)
+        setShowBaby(prevState => !prevState)
+        console.log(showBaby)
     }
 
     const { babyname, gender, babyImg, dob } = inputs

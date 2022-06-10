@@ -9,7 +9,9 @@ font-family: 'Roboto', sans-serif; */
 }
 .swiper{
     background: linear-gradient(250deg,pink, pink,white,purple);
-    height: 625px;
+    
+}
+.swiper-slide{
 }
 .swiper-wrapper{
     height: 100%;
@@ -23,6 +25,7 @@ font-family: 'Roboto', sans-serif; */
     background-color: rgb(251, 167, 216);
     border-radius: 15px;
     opacity: 1;
+    margin-top: 3.5em;
 	animation: fadeInOpacity 1 ease-in 3s, transform 1 ease-in-out 3s
 }
 @keyframes fadeInOpacity {
