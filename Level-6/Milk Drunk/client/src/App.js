@@ -7,11 +7,12 @@ import NotMember from './components/NotMember';
 import Auth from './components/Auth';
 import ErrorPage from './components/ErrorPage';
 import Public from './components/Public';
-import './styles/App.css';
 import Greeting from './components/Greeting';
 // import Footer from './components/Footer';
 import BabyProfile from './components/BabyProfile';
 import Community from './components/Community';
+import DiaperForm from './components/DiaperForm';
+import './styles/App.css';
 
 function App() {
   const {token, logout} = useContext(MainContext)
@@ -42,6 +43,10 @@ function App() {
       <Route 
         path="/community"
         element={token ? <Community />: <NotMember/>}
+      />
+      <Route 
+        path="/profile/diaperform"
+        element={token ? <DiaperForm />: <NotMember/>}
       />
       <Route 
         path="*"

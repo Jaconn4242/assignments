@@ -1,15 +1,19 @@
 import React from 'react'
-import "../styles/Tracker.css"
+import {useNavigate} from "react-router-dom"
 import BabyBottle from "../images/BabyBottle.png"
 import Diaper from "../images/Diaper.png"
 import Crib from "../images/Crib.png"
+import "../styles/Tracker.css"
 
 
 
 function Trackers() {
+
+    const navigate = useNavigate()
+
   return (
     <div className='tracker-container'>
-        <div>
+        <div onClick={() => navigate("/profile/diaperform")}>
             <img src={BabyBottle} alt="" />
             <p>Feeding session</p> 
         </div>

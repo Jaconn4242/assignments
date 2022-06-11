@@ -122,6 +122,18 @@ export default function ContextProvider (props) {
     //         }))
     //     })
     // }
+
+    // function newGetComments(aircraftId){
+    //     userAxios.get(`api/aircraft/comments/${aircraftId}/comments`)
+    //  .then(res => setAircraftComments(res.data))
+    //  .catch(err => console.log(err.response.data.errMsg))
+    //  }
+
+    //  function addAircraftComment(aircraftId, newComment){
+    //     userAxios.post(`api/aircraft/comments/${aircraftId}/comments`, newComment)
+    //     .then(res => setAircraftComments(prevState => [...prevState, res.data]))
+    //     .catch(err => console.log(err.response.data.errMsg))
+    //   } 
     return(
         <MainContext.Provider value={{
             userAxios,

@@ -25,6 +25,9 @@ const trackerSchema = new Schema({
     diaperStatus:{
         type: String
     },
+    diaperNotes:{
+        type: String
+    },
 //Sleeping Section Below
     sleepingDate: {
         type: String,
