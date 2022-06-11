@@ -3,7 +3,7 @@ const trackerRouter = express.Router()
 const Tracker = require("../models/trackerLog.js")
 
 
-// Get all trackerLogs comments by baby ID
+// Get all trackerLogs by baby ID
 trackerRouter.get('/:babyId/trackerLogs', (req, res, next) => {
     Tracker.find({ baby: req.params.babyId }, (err, trackerLogs) => {
       if (err) {
