@@ -1,9 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { MainContext } from '../context/ContextProvider';
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import "../styles/DiaperForm.css"
 
 function FeedingForm() {
+
+    const params = useParams()
+
     const initInputs = {
         diaperDate: "",
         diaperTime: "",
@@ -14,7 +17,7 @@ function FeedingForm() {
     const [trackerLogs, setTrackerLogs] = useState([])
     const [inputs, setInputs] = useState(initInputs)
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -24,29 +27,35 @@ function FeedingForm() {
         }))
     }
 
-    function handleSubmit(e) {
-        e.preventDefault()
-
-        userAxios.post(`/api/baby/trackerLogs/${baby[0]._id}/trackerLogs`, inputs)
+    function addTrackerLog(inputs) {
+        userAxios.post(`/api/baby/trackerLogs/${params.babyId}/trackerLogs`, inputs)
             .then(res => setTrackerLogs(prevState => [...prevState, res.data]))
             .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        addTrackerLog(inputs)
         setInputs(initInputs)
         // navigate("/profile")
     }
 
-    function getBabyTrackerLogs(babyId) {
-        userAxios.get(`api/baby/trackerLogs/${babyId}/trackerLogs`)
-            .then(res => console.log(res.data))
+    useEffect(() => {
+        getUserBabies()
+        getBabyTrackerLogs()
+        // eslint-disable-next-line
+    }, [])
+
+    function getBabyTrackerLogs(realId) {
+        userAxios.get(`/api/baby/trackerLogs/${params.babyId}/trackerLogs`)
+            .then(res => setTrackerLogs(res.data))
             .catch(err => console.log(err.response.data.errMsg))
     }
-
-    useEffect(() => {
-        getUserBabies(user._id)
-        getBabyTrackerLogs(baby[0]._id)
-    }, [])
+    console.log(trackerLogs)
     const { diaperDate, diaperTime, diaperStatus, diaperNotes } = inputs
     return (
         <>
+            {/* <button onClick={addTrackerLog}>addtrackerlog</button> */}
             <form className='feeding-form' onSubmit={handleSubmit}>
                 <h1>Diaper Change</h1>
                 <input type="Date"
@@ -80,18 +89,15 @@ function FeedingForm() {
                 ></textarea>
                 <button>Submit</button>
             </form>
-            <div>
-                {trackerLogs.map(log => <div
-                    key={log._id}
-                    className="tracker-log-card"
-                >
+            {trackerLogs.map(log => {
+                return (
+                <div key={log._id} className="log-container" onClick={console.log(log.diaperStatus)}>
                     <p>{log.diaperDate}</p>
                     <p>{log.diaperTime}</p>
                     <p>{log.diaperStatus}</p>
                     <p>{log.diaperNotes}</p>
-                    <p>{log.date}</p>
-                </div>)}
-            </div>
+                </div>
+            )})}
         </>
     )
 }

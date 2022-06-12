@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {useNavigate} from "react-router-dom"
+// import { MainContext } from '../context/ContextProvider'
 import BabyBottle from "../images/BabyBottle.png"
 import Diaper from "../images/Diaper.png"
 import Crib from "../images/Crib.png"
@@ -7,17 +8,18 @@ import "../styles/Tracker.css"
 
 
 
-function Trackers() {
+function Trackers(props) {
+    const {baby} = props
 
     const navigate = useNavigate()
-
+  
   return (
     <div className='tracker-container'>
-        <div onClick={() => navigate("/profile/diaperform")}>
+        <div>
             <img src={BabyBottle} alt="" />
             <p>Feeding session</p> 
         </div>
-        <div>
+        <div onClick={() => navigate(`/diaperform/${baby._id}`, {color: "red"})}>
             <img src={Diaper} alt="" />
             <p>Diaper change</p> 
         </div>

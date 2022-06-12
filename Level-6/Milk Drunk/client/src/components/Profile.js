@@ -2,10 +2,13 @@ import React, { useContext, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import { MainContext } from '../context/ContextProvider';
 import AddImage from "../images/AddImage.png"
+import MenuIcon from "../images/MenuIcon.png"
 import "../styles/Profile.css"
 import Trackers from './Trackers';
 // import UserBaby from './UserBaby';
-
+// disadvantage getting entire list of babies)how much, how often, how redundant
+// less network traffic mindset!
+// 
 export default function Profile() {
 
   const navigate = useNavigate()
@@ -25,27 +28,25 @@ export default function Profile() {
 
   return (
     <>
-      <div className='profile'>
+      <h2 className='profile-header'>Welcome back {username}!</h2>
+      
         {baby.map(child => {
-          if (child.babyImg) {
-            return <div key={child._id} className='profile-section1'>
-              <img src={child.babyImg} alt="" className='baby-image' width={200} />
+          return <div key={child._id} className='profile'>
+            <img src={child.babyImg} onClick={() => navigate(`/babydetails/${child._id}`)} alt="" className='baby-image' width={200} />
+            <div key={child._id} className='baby-info-box'>
+
+              <p>{child.babyname.charAt(0).toUpperCase() + child.babyname.slice(1)}</p>
+              <p>Age:</p>
             </div>
-          } else {
-            return <div key={child._id} className='profile-section1'>
-              <p>Add Baby Info</p>
-              <img src={AddImage} alt="" onClick={() => navigate("/babyprofile")} />
-            </div>
-          }
-        })}
-        {baby.map(child => <div key={child._id} className='baby-info-box'>
-          
-          <p>{child.babyname.charAt(0).toUpperCase() + child.babyname.slice(1)}</p>
-          <p>Age:</p>
-        </div>
-        )}
+          </div>
+        })} 
+      <div className='default-image-container'>
+      <img className='default-image' 
+        src={AddImage} 
+        alt="add-baby-image"
+        onClick={()=>navigate("/addbabyform")}
+        />
       </div>
-      <Trackers />
     </>
   )
 }

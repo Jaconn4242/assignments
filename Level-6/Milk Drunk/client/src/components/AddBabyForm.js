@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { MainContext } from '../context/ContextProvider';
+import {useNavigate} from "react-router-dom"
 import "../styles/AddBabyForm.css"
 
 const initInputs = {
@@ -8,9 +10,11 @@ const initInputs = {
     babyImg: ""
 }
 
-export default function AddBabyForm(props) {
+export default function AddBabyForm() {
+    const {getUserBabies, addBaby} = useContext(MainContext)
     const [inputs, setInputs] = useState(initInputs)
-    const { addBaby, showBaby, setShowBaby } = props
+    const navigate = useNavigate()
+    
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -24,9 +28,12 @@ export default function AddBabyForm(props) {
         e.preventDefault()
         addBaby(inputs)
         setInputs(initInputs)
-        setShowBaby(prevState => !prevState)
-        console.log(showBaby)
+        navigate("/profile")
     }
+    useEffect(() => {
+        getUserBabies()
+        // eslint-disable-next-line
+    }, [])
 
     const { babyname, gender, babyImg, dob } = inputs
     return (
