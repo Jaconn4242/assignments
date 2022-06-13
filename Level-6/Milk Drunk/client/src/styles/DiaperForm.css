@@ -3,12 +3,17 @@
     flex-direction: column;
     text-align: center;
     margin: auto;
-    padding: 2em;
+    padding: 0 2em 0 2em;
     gap: 1em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    border-radius: .5em;
-    margin-top: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid rgb(73, 69, 69);
+}
+
+.feeding-form h1{
+    background: -webkit-linear-gradient(rgb(26, 1, 218), rgb(226, 15, 212));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .feeding-form input {
@@ -22,6 +27,7 @@
     flex-direction: row;
     gap: 1em;
     width: fit-content;
+    margin: auto;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -33,6 +39,7 @@
     padding: 4px 11px;
     font-size: 16px;
     cursor: pointer;
+    
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
@@ -49,8 +56,7 @@
     width: fit-content;
     margin: auto;
     border-radius: 10px;
-    padding: 1em;
-    margin-top: 1em;
+    padding: .5em;
 }
 
 .tracker-log-card{
@@ -61,12 +67,10 @@
     padding: .25em;
     border-radius: 10px;
 }
-.log-container{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid grey;
-    gap: .25em;
-    padding: .25em;
-    margin-bottom: .25em;
-    border-radius: 10px;
+
+.back-button{
+    text-align: left;
+    padding: .5em 0 0 0;
+    font-weight: 800;
+    text-decoration: underline;
 }

@@ -1,0 +1,13 @@
+.log-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    gap: .25em;
+    padding: .25em;
+    margin-bottom: .25em;
+    border-radius: 10px;
+}
+.log-container button{
+    width: fit-content;
+    margin-left: auto;
+}

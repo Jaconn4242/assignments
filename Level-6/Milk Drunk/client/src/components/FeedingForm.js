@@ -2,19 +2,19 @@ import React, { useState, useContext, useEffect } from 'react'
 import { MainContext } from '../context/ContextProvider';
 import { useNavigate, useParams } from "react-router-dom"
 import "../styles/DiaperForm.css"
-import DiaperList from './DiaperList';
+import FeedingList from './FeedingList';
 
 function FeedingForm() {
 
     const params = useParams()
 
     const initInputs = {
-        diaperDate: "",
-        diaperTime: "",
-        diaperStatus: "",
+        feedingDate: "",
+        feedingTime: "",
+        feedingAmount: "",
         diaperNotes: ""
     }
-    const { userAxios, getUserBabies, user, baby } = useContext(MainContext)
+    const { userAxios, getUserBabies, baby } = useContext(MainContext)
     const [trackerLogs, setTrackerLogs] = useState([])
     const [inputs, setInputs] = useState(initInputs)
 
@@ -53,24 +53,24 @@ function FeedingForm() {
             .catch(err => console.log(err.response.data.errMsg))
     }
 
-    const { diaperDate, diaperTime, diaperStatus, diaperNotes } = inputs
+    const { feedingDate, feedingTime, feedingAmount, feedingNotes } = inputs
     return (
         <>
             {/* <button onClick={addTrackerLog}>addtrackerlog</button> */}
             <form className='feeding-form' onSubmit={handleSubmit}>
                 <p onClick={() => navigate(-1)} className='back-button'> Back</p>
-                <h1>Diaper Change</h1>
+                <h1>Feeding Time</h1>
                 <input type="Date"
-                    name="diaperDate"
-                    value={diaperDate}
+                    name="feedingDate"
+                    value={feedingDate}
                     onChange={handleChange}
                 />
                 <input type="Time"
-                    name="diaperTime"
-                    value={diaperTime}
+                    name="feedingTime"
+                    value={feedingTime}
                     onChange={handleChange}
                 />
-                <div className="radio-toolbar" name="diaperStatus" value={diaperStatus} onChange={handleChange}>
+                {/* <div className="radio-toolbar" name="diaperStatus" value={diaperStatus} onChange={handleChange}>
                     <input type="radio" id="radio1" name="diaperStatus" value="wet" />
                     <label htmlFor="radio1">Wet</label>
 
@@ -82,16 +82,22 @@ function FeedingForm() {
 
                     <input type="radio" id="radio4" name="diaperStatus" value="dry" />
                     <label htmlFor="radio4">Dry</label>
-                </div>
+                </div> */}
+                <input type="text"
+                       name="feedingAmount" 
+                       value={feedingAmount}
+                       onChange={handleChange}
+                       placeholder="oz." 
+                        />
                 <textarea className='notes-container'
                     placeholder='Additional notes... '
-                    name="diaperNotes"
-                    value={diaperNotes}
+                    name="feedingNotes"
+                    value={feedingNotes}
                     onChange={handleChange}
                 ></textarea>
                 <button>Submit</button>
             </form>
-            <DiaperList trackerLogs={trackerLogs}
+            <FeedingList trackerLogs={trackerLogs}
                 setTrackerLogs={setTrackerLogs}
                 baby={baby}
                 getBabyTrackerLogs={getBabyTrackerLogs}

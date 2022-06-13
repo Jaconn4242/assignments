@@ -13,6 +13,7 @@ import DiaperForm from './components/DiaperForm';
 import './styles/App.css';
 import BabyDetails from './components/BabyDetails';
 import AddBabyForm from './components/AddBabyForm';
+import FeedingForm from './components/FeedingForm';
 
 function App() {
   const {token, logout} = useContext(MainContext)
@@ -46,6 +47,10 @@ function App() {
       <Route 
         path="/diaperform/:babyId"
         element={token ? <DiaperForm />: <NotMember/>}
+      />
+      <Route 
+        path="/feedingform/:babyId"
+        element={token ? <FeedingForm />: <NotMember/>}
       />
       <Route 
         path="/babydetails/:babyId"

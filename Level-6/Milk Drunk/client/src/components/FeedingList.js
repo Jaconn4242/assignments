@@ -5,19 +5,19 @@ function DiaperList(props) {
 
     const { userAxios } = useContext(MainContext)
 
-    const { trackerLogs, setTrackerLogs, getBabyTrackerLogs } = props
+    const { trackerLogs, getBabyTrackerLogs } = props
 
     return (
         <>
             {trackerLogs.map(log => {
-                if(log.diaperTime){
+                if(log.feedingTime){
                 return (
                     <div key={log._id} className="log-container" >
-                        <p>{log.diaperDate}</p>
-                        <p>{log.diaperTime}</p>
-                        <p>{log.diaperStatus}</p>
-                        <p>{log.diaperNotes}</p>
-                        <button className='diaper-button' onClick={() => {
+                        <p>{log.feedingDate}</p>
+                        <p>{log.feedingTime}</p>
+                        <p>{log.feedingAmount}</p>
+                        <p>{log.feedingNotes}</p>
+                        <button className='feeding-button' onClick={() => {
                             userAxios.delete(`/api/baby/trackerLogs/${log.baby}/trackerLogs/${log._id}`)
                                 .then(res => {
                                     // setTrackerLogs(prevLogs => prevLogs.filter(item => (item._id !== res.data._id )))
@@ -28,7 +28,7 @@ function DiaperList(props) {
                                 .catch(err => console.log(err))
                         }}>Delete Log</button>
                     </div>
-                )}
+                )} 
             })}
         </>
     )

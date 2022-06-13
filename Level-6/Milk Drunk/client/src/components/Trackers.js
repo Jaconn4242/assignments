@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React from 'react'
 import {useNavigate} from "react-router-dom"
 // import { MainContext } from '../context/ContextProvider'
 import BabyBottle from "../images/BabyBottle.png"
@@ -15,11 +15,11 @@ function Trackers(props) {
   
   return (
     <div className='tracker-container'>
-        <div>
+        <div onClick={() => navigate(`/feedingform/${baby._id}`)}>
             <img src={BabyBottle} alt="" />
             <p>Feeding session</p> 
         </div>
-        <div onClick={() => navigate(`/diaperform/${baby._id}`, {color: "red"})}>
+        <div onClick={() => navigate(`/diaperform/${baby._id}`)}>
             <img src={Diaper} alt="" />
             <p>Diaper change</p> 
         </div>
