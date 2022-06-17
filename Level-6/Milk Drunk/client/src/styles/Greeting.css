@@ -52,15 +52,18 @@ font-family: 'Roboto', sans-serif; */
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 10%;
+    height: 680px;
 }
 .slide-two ul{
     list-style: none;
-    margin-left: 2em;
+    margin-left: 6em;
 }
 .list-item{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 1.2em;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     background: -webkit-linear-gradient(rgb(26, 1, 218), rgb(226, 15, 212));
@@ -68,12 +71,16 @@ font-family: 'Roboto', sans-serif; */
     -webkit-text-fill-color: transparent;
 }
 .slide-two button{
+    position: relative;
+    bottom: 16em;
+    left: 3em;
     background: linear-gradient(  rgb(26, 1, 218), rgb(226, 15, 212));
     color: white;
-    padding: .5em;
+    padding: 1em;
     font-family: inherit;
     border-radius: 10px;
     font-weight: 500;
     box-shadow: 0 2px 10px rgb(186, 80, 98);
+    border: 2px solid black;
 }
 

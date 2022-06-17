@@ -23,7 +23,7 @@ function Trackers(props) {
             <img src={Diaper} alt="" />
             <p>Diaper change</p> 
         </div>
-        <div>
+        <div onClick={() => navigate(`/sleepingform/${baby._id}`)}>
             <img src={Crib} alt="" />
             <p>Sleep time</p> 
         </div>

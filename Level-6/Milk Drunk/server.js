@@ -18,6 +18,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 
 app.use("/auth", require("./routes/authRouter.js"))
 app.use("/api", jwt({secret: process.env.SECRET, algorithms: ["HS256"]}))
+app.use("/api/post", require("./routes/postRouter.js"))
 app.use("/api/baby", require("./routes/babyRouter.js"))
 app.use("/api/baby/trackerLogs", require("./routes/trackerRouter.js"))
 

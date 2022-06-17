@@ -14,6 +14,7 @@ import './styles/App.css';
 import BabyDetails from './components/BabyDetails';
 import AddBabyForm from './components/AddBabyForm';
 import FeedingForm from './components/FeedingForm';
+import SleepingForm from './components/SleepingForm';
 
 function App() {
   const {token, logout} = useContext(MainContext)
@@ -55,6 +56,11 @@ function App() {
       <Route 
         path="/babydetails/:babyId"
         element= {token ? <BabyDetails />: <NotMember/>}
+        // render = {(props)=> {console.log(props)}}
+      />
+      <Route 
+        path="/sleepingform/:babyId"
+        element= {token ? <SleepingForm />: <NotMember/>}
         // render = {(props)=> {console.log(props)}}
       />
       <Route 
