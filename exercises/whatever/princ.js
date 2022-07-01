@@ -64,3 +64,32 @@ let runTime = setInterval(() => {
         player.gotPowerUp();
     } else player.addCoin();
 }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+const removeOutOfStock = (arr) => {
+    let result = arr.filter(product => {
+        if(product.data.products > 0){
+            product.data.products.map(inStock => {
+                return
+            }) 
+        } 
+    })
+    return result
+}
+
+for(let i = 0; i < widget.products; i++){
+    let deleted = widget.products[i].variants
+    if(widget.products[i].selected_variant.inventory_quantity === 0){
+        
+    }
+}   

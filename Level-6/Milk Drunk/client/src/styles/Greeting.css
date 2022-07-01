@@ -72,8 +72,8 @@ font-family: 'Roboto', sans-serif; */
 }
 .slide-two button{
     position: relative;
-    bottom: 16em;
-    left: 3em;
+    top: 1em;
+    right: 3em;
     background: linear-gradient(  rgb(26, 1, 218), rgb(226, 15, 212));
     color: white;
     padding: 1em;
@@ -81,6 +81,6 @@ font-family: 'Roboto', sans-serif; */
     border-radius: 10px;
     font-weight: 500;
     box-shadow: 0 2px 10px rgb(186, 80, 98);
-    border: 2px solid black;
+    border: 2px solid black; 
 }
 
