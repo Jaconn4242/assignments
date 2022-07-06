@@ -9,7 +9,7 @@ function Community() {
   useEffect(() => {
     getAllBabies()
     // eslint-disable-next-line
-  })
+  }, [])
   console.log(allBabies)
   return (
     <div>Community

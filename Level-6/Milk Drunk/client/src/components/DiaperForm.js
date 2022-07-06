@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import "../styles/DiaperForm.css"
 import DiaperList from './DiaperList';
 
-function FeedingForm() {
+function DiaperForm() {
 
     const params = useParams()
 
@@ -14,7 +14,7 @@ function FeedingForm() {
         diaperStatus: "",
         diaperNotes: ""
     }
-    const { userAxios, getUserBabies, user, baby } = useContext(MainContext)
+    const { userAxios, getUserBabies, baby } = useContext(MainContext)
     const [trackerLogs, setTrackerLogs] = useState([])
     const [inputs, setInputs] = useState(initInputs)
 
@@ -100,4 +100,4 @@ function FeedingForm() {
     )
 }
 
-export default FeedingForm
+export default DiaperForm

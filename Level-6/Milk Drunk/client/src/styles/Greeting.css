@@ -9,9 +9,9 @@ font-family: 'Roboto', sans-serif; */
 }
 .swiper{
     background: linear-gradient(250deg,pink, pink,white,purple);
-    
 }
 .swiper-slide{
+    /* something */
 }
 .swiper-wrapper{
     height: 100%;

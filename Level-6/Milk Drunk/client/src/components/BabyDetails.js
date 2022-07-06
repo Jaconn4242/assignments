@@ -1,13 +1,13 @@
 import React,{useContext, useEffect} from 'react'
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
 import { MainContext } from '../context/ContextProvider';
 import Trackers from './Trackers';
 import "../styles/BabyDetails.css"
 
 function BabyDetails() {
 
-    const {baby, getUserBabies} = useContext(MainContext)
-
+    const {baby, getUserBabies, userAxios} = useContext(MainContext)
+    const navigate = useNavigate()
     const params = useParams()
 // unidirection render cycle. 
 //uni direction cycle - trigger new render if new data
@@ -19,6 +19,7 @@ function BabyDetails() {
         getUserBabies()
         // more efficient if I had a getbabytrackerlogs by babyId
         // if there is no baby data and baby does not exist go fetch that baby(efficent practices!)
+        // eslint-disable-next-line
     }, [])
 
     //loading text while data is being fetched(state change delay)
@@ -26,9 +27,21 @@ function BabyDetails() {
         return <p>...loading</p>
     }
 
+    const deleteBaby = (babyId) => {
+        console.log(`clicked, ${babyId}`)
+        userAxios.delete(`/api/baby/${babyId}`)
+         .then(res => alert(res.data))
+         .then(err => console.log(err))
+    }
+    const foundBabyId = foundBaby._id
   return (
     <div className='baby-details-container'>
-        <h1>{foundBaby.babyname.charAt(0).toUpperCase() + foundBaby.babyname.slice(1)}</h1>
+        <h1>{foundBaby.babyname.charAt(0).toUpperCase() + foundBaby.babyname.slice(1)}
+        <div onClick={() => {
+            deleteBaby(foundBabyId)
+            navigate("/profile")
+            }} className='delete-baby-button'>Delete</div>
+        </h1>
         
         <Trackers baby={foundBaby}/>
         </div>

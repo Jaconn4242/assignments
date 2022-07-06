@@ -33,8 +33,10 @@ function NavBar(props) {
           <li
             className="navlink"
             onClick={
-              ()=> {navigate("/profile")
-              logout()}
+              ()=> {
+                logout()
+                navigate("/Auth")
+            }
             }
             activeclassname="selected"
             >

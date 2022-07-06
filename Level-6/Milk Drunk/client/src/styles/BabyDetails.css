@@ -2,3 +2,14 @@
     text-align: center;
     background: -webkit-linear-gradient(rgb(103, 86, 236), rgb(228, 131, 221));
 }
+.delete-baby-button{
+    width: 16%;
+    border-radius: 8px;
+    border: 1px solid black;
+    right: 1px;
+    top: 7px;
+    font-size:medium;
+    position: absolute;
+    height: fit-content;
+    background-color: tomato;
+}

@@ -1,4 +1,7 @@
 body, html{
     margin: 0;
     padding: 0;
+    height: calc(100% - 50px);
+    overflow:scroll;
 }
+

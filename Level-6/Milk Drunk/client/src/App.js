@@ -68,7 +68,7 @@ function App() {
         element={<ErrorPage />}
       />
     </Routes>
-    <NavBar logout={logout} token={token} /> 
+    <NavBar logout={logout} token={token} className="navbar" /> 
     </div>
   );
 }
