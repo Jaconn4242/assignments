@@ -6,16 +6,20 @@ font-family: 'Roboto', sans-serif; */
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 40%;
+    height: 100%;
 }
 .swiper{
     background: linear-gradient(250deg,pink, pink,white,purple);
-}
-.swiper-slide{
-    /* something */
-}
-.swiper-wrapper{
     height: 100%;
 }
+.swiper-slide{
+    height: 100%;
+}
+.swiper-slide-active{
+}
+.swiper-wrapper{
+    height: 670px;
+  }
 .swipe-container{
     display: grid;
     grid-template-columns: auto 1fr;
@@ -26,7 +30,7 @@ font-family: 'Roboto', sans-serif; */
     border-radius: 15px;
     opacity: 1;
     margin-top: 3.5em;
-	animation: fadeInOpacity 1 ease-in 3s, transform 1 ease-in-out 3s
+	animation: fadeInOpacity 1 ease-in 3s, transform 1 ease-in-out 3s;
 }
 @keyframes fadeInOpacity {
 	0% {

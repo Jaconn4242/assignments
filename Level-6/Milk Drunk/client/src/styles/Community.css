@@ -1,0 +1,68 @@
+.community-page{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+    background: rgb(240, 238, 238);
+}
+.community-section{
+    
+}
+.community-header{
+   text-align: center;
+   height: 300px;
+   box-shadow: 0 2px 8px -2px gray;
+   background-color: white;
+}
+.community-header img{
+    width: 150px;
+    height: 150px;
+}
+.community-header h1{
+    font-size: x-large;
+    margin-bottom: .2em;
+    background: -webkit-linear-gradient(rgb(26, 1, 218), rgb(226, 15, 212));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.community-header p{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    color: rgb(154, 153, 153)
+}
+.community-stats{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5em;
+}
+.community-stats span{
+    color: lightgray;
+}
+.all-posts_qty{
+    border-right: 2px solid lightgray;
+    font-weight:bolder;
+    color: purple;
+}
+.all-members_qty{
+    color: purple;
+    font-weight: bolder;
+}
+.community-stats span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(154, 153, 153);
+    font-size: 14px;
+    font-weight: 500;
+}
+.post-section-title{
+    width: 100%;
+    margin: 10px 0 10px 10px;
+    color: rgb(34, 32, 32);
+    font-weight: 600;
+    
+}
+.post-section{
+    flex-grow: 1;
+}

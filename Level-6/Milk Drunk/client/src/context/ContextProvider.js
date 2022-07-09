@@ -21,7 +21,8 @@ export default function ContextProvider (props) {
 
     const [userState, setUserState] = useState(initState)
     const [allBabies, setAllBabies] = useState([])
-    //local state for baby profile pic
+    const [allPosts, setAllPosts] = useState([])
+
     function signup(credentials){
         axios.post("/auth/signup", credentials)
         .then(res => {
@@ -106,11 +107,11 @@ export default function ContextProvider (props) {
         .catch(err => console.log(err.response.data.errMsg))
     }
 
-    function deleteUserBaby(babyId){
-        userAxios.delete(`/api/aircraft/${babyId}`)
-        .then(res => console.log(res))
-        .catch(err => console.log(err.response.data.errMsg))
-    }
+    // function deleteUserBaby(babyId){
+    //     userAxios.delete(`/api/aircraft/${babyId}`)
+    //     .then(res => console.log(res))
+    //     .catch(err => console.log(err.response.data.errMsg))
+    // }
 
     //NEEDS WORK!
     // function updateUserBaby(babyId, updates){
@@ -134,10 +135,17 @@ export default function ContextProvider (props) {
     //     .then(res => setAircraftComments(prevState => [...prevState, res.data]))
     //     .catch(err => console.log(err.response.data.errMsg))
     //   } 
+    function getAllPosts() {
+        userAxios.get("/api/post")
+        .then(res => setAllPosts(res.data))
+        .catch(err => console.log(err.response.data.errMsg))
+    }
+
     return(
         <MainContext.Provider value={{
             userAxios,
             allBabies,
+            allPosts,
             ...userState,
             signup,
             login,
@@ -146,7 +154,7 @@ export default function ContextProvider (props) {
             resetAuthErr,
             getAllBabies,
             getUserBabies,
-            deleteUserBaby,
+            getAllPosts
             // updateUserBaby
         }}>
             {props.children}

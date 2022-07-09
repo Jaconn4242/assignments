@@ -2,7 +2,7 @@ const express = require("express")
 const postRouter = express.Router()
 const Post = require("../models/post.js")
 
-// get all Aircraft
+// get all Posts
 postRouter.get("/", (req,res,next) => {
     Post.find((err, posts) => {
         if(err){
@@ -40,6 +40,7 @@ postRouter.get("/:postId", (req, res, next) => {
 postRouter.post("/", (req, res, next) => {
     req.body.user = req.auth._id
     const post = new Post(req.body);
+    console.log(req)
     post.save((err, newPost) => {
         if(err){
             res.status(500)
