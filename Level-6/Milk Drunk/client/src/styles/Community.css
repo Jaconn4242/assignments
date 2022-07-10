@@ -4,9 +4,6 @@
     height: 100%;
     background: rgb(240, 238, 238);
 }
-.community-section{
-    
-}
 .community-header{
    text-align: center;
    height: 300px;
@@ -55,13 +52,6 @@
     color: rgb(154, 153, 153);
     font-size: 14px;
     font-weight: 500;
-}
-.post-section-title{
-    width: 100%;
-    margin: 10px 0 10px 10px;
-    color: rgb(34, 32, 32);
-    font-weight: 600;
-    
 }
 .post-section{
     flex-grow: 1;

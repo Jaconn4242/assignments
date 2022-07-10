@@ -1,6 +1,8 @@
 const express = require("express")
 const postRouter = express.Router()
 const Post = require("../models/post.js")
+const user = require("../models/user.js")
+const User = require("../models/user.js")
 
 // get all Posts
 postRouter.get("/", (req,res,next) => {
@@ -23,19 +25,44 @@ postRouter.get("/user", (req, res, next) => {
         return res.status(200).send(post)
     })
 })
+
 // get post by postId
+// postRouter.get("/:postId", (req, res, next) => {
+//     Post.findById(req.params.postId, (err, post) => {
+//         if(err){
+//             res.status(500)
+//             return next(err)
+//         } else if(!post){
+//             res.status(404)
+//             return next(new Error("No post found"));
+//         }
+//         return res.send(post)
+//     })
+// })
+
+                                                                // , "-password"
 postRouter.get("/:postId", (req, res, next) => {
-    Post.findById(req.params.postId, (err, post) => {
-        if(err){
-            res.status(500)
-            return next(err)
-        } else if(!post){
-            res.status(404)
-            return next(new Error("No post found"));
-        }
-        return res.send(post)
-    })
+    Post.findById(req.params.postId).
+    populate("user", 'username').
+    exec( (err, post) => {
+        if(err){           
+                res.status(500)
+                return next(err)
+           }   
+          return res.status(200).send(post)
 })
+//INTERESTING WAY WITH TRY/CATCH BELOW
+// try {
+//     let data = Post.findById(req.params.postId).populate({
+//       path: 'user',
+//       select:
+//         'username',
+//     });
+//     res.status(200).send(data);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json({ success: false, msg: err.message });
+//   }
 // add a new post
 postRouter.post("/", (req, res, next) => {
     req.body.user = req.auth._id
@@ -49,6 +76,8 @@ postRouter.post("/", (req, res, next) => {
         return res.status(200).send(newPost);
     });
 });
+});
+
 
 // update an aircraft
 postRouter.put("/:postId", (req, res, next) => {

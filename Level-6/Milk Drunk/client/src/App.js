@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate} from 'react-router-dom'
 import { MainContext } from './context/ContextProvider';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
@@ -68,7 +68,7 @@ function App() {
         element={<ErrorPage />}
       />
     </Routes>
-    <NavBar logout={logout} token={token} className="navbar" /> 
+    <NavBar logout={logout} token={token} className="navbar" />
     </div>
   );
 }

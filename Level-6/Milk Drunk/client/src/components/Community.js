@@ -3,15 +3,20 @@ import { useNavigate } from "react-router-dom";
 import CommunityImage from "../images/community-image.svg";
 import { MainContext } from "../context/ContextProvider";
 import "../styles/Community.css";
+import CommunityPost from "./CommunityPost";
 
 function Community() {
-  const { getAllPosts, allPosts } = useContext(MainContext);
+  const { getAllPosts, allPosts, userAxios } = useContext(MainContext);
 
   useEffect(() => {
     getAllPosts();
     // eslint-disable-next-line
   }, []);
-  console.log(allPosts);
+
+  if (!allPosts) {
+    return <p>...loading</p>;
+  }
+
   return (
     <div className="community-page">
       <div className="community-section">
@@ -34,11 +39,9 @@ function Community() {
       </div>
       <div className="post-section">
         {allPosts.map((post) => {
+          const options = { weekday: 'long', year: 'numeric', month: 'long', day: `numeric`};
           return (
-            <div className="post-content-box">
-              <p className="post-user-info">{post.user}</p>
-              <p className="post-user-title">{post.title}</p>
-            </div>
+            <CommunityPost {...post} allPosts={allPosts}userAxios={userAxios} key={post._id}/>
           );
         })}
       </div>

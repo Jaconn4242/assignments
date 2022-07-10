@@ -62,6 +62,7 @@ function BabyDetails() {
           foundBaby.babyname.charAt(0).toUpperCase() +
           foundBaby.babyname.slice(1) }?`}
         <p><u>This action is irreversible</u></p>
+        {/* if a user deletes baby make sure it deletes trackers too, create function! */}
         <button onClick={() => {
             deleteBaby(foundBabyId)
             navigate("/profile")

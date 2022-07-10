@@ -154,7 +154,7 @@ export default function ContextProvider (props) {
             resetAuthErr,
             getAllBabies,
             getUserBabies,
-            getAllPosts
+            getAllPosts,
             // updateUserBaby
         }}>
             {props.children}
