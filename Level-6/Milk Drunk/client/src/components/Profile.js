@@ -8,7 +8,7 @@ import "../styles/Profile.css"
 // disadvantage getting entire list of babies)how much, how often, how redundant
 // less network traffic mindset!
 
-export default function Profile() {
+function Profile() {
 
   const navigate = useNavigate()
 
@@ -49,3 +49,5 @@ export default function Profile() {
     </>
   )
 }
+
+export default React.memo(Profile)
