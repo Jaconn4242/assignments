@@ -27,7 +27,7 @@ function Profile() {
 
   return (
     <>
-      <h2 className='profile-header'>Welcome back {username}!</h2>
+      <h2 className='profile-header'>Welcome back {username.charAt(0).toUpperCase()+username.slice(1)}!</h2>
       
         {baby.map(child => {
           return <div key={child._id} className='profile'>

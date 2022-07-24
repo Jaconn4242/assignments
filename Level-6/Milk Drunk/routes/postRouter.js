@@ -17,15 +17,16 @@ postRouter.get("/", (req,res,next) => {
 
 // get post by userId
 postRouter.get("/user", (req, res, next) => {
-    Post.find({user: req.auth._id}, (err, post) => {
+    Post.find({user: req.auth._id}).
+    populate("user", "username").
+    exec((err, posts)=> {
         if(err){
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(post)
-        console.log(res)
+        return res.status(200).send(posts)
     })
-});
+})
 
 //get posts by user
 // postRouter.get('/user', (req, res, next) => {

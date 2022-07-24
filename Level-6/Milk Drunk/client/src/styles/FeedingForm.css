@@ -1,0 +1,44 @@
+
+.feeding-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    padding-bottom: 3em;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)), rgba(0, 0, 0, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px, solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+    background: -webkit-linear-gradient(rgb(103, 86, 236), rgb(228, 131, 221));
+}
+.feeding-form-header{
+    background: -webkit-linear-gradient(rgb(26, 1, 218), rgb(226, 15, 212));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.feeding-form input {
+    width: fit-content;
+    margin: auto;
+    padding: .5em;
+    background-color: lightgrey;
+}
+.notes-container {
+    max-width: 100%;
+    max-height: 100px;
+    overflow: scroll;
+    background-color: lightgrey;
+}
+
+.feeding-form button{
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    padding: .5em;
+    background: -webkit-linear-gradient(rgb(103, 86, 236), rgb(228, 131, 221));
+    width:40%
+}
+.feeding-list-container{
+    border: 2px solid black;
+    padding: 1em
+}

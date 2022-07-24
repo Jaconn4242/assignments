@@ -38,6 +38,7 @@ export default function AddBabyForm() {
     const { babyname, gender, babyImg, dob } = inputs
     return (
         <div className='baby-form-wrapper'>
+            <h2 className='add-form-header'>With just a few clicks, track and compare your little one's progress and development</h2>
             <form className='baby-form-container' onSubmit={handleSubmit}>
                 <h3>Baby Info</h3>
                 <input
@@ -49,6 +50,7 @@ export default function AddBabyForm() {
                 <select name="gender" 
                         value={gender}
                         onChange={handleChange}
+                        className="gender-input"
                         >
                     <option value="reset">Select a Gender</option>
                     <option value="male">Male</option>
@@ -66,7 +68,7 @@ export default function AddBabyForm() {
                     value={dob}
                     onChange={handleChange}
                     placeholder="Date of Birth" />
-                <button>Submit Information</button>
+                <button>Add</button>
             </form>
         </div>
     )

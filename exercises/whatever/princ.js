@@ -93,3 +93,52 @@ for(let i = 0; i < widget.products; i++){
         
     }
 }   
+
+// Orthofeet
+setTimeout(() => {
+    const infoElements = document.querySelectorAll("#rebuy-widget-41497 .rebuy-product-info")
+    infoElements.forEach((item) => {
+        const customText = document.createElement("div")
+        customText.textContent = "Choose Size:"
+        customText.style.marginTop = "15px"
+        item.appendChild(customText)
+    })
+    const quantityText = document.querySelectorAll("#rebuy-widget-41497 .rebuy-product-info .rebuy-product-price .rebuy-money.compare-at")
+    quantityText.forEach((item) => {
+        const threePair = document.createElement("span")
+        threePair.textContent = "(3-Pair)"
+        threePair.classList.add("pair-quantity")
+        threePair.style.textDecoration = "none "
+        item.append(threePair)
+    })
+    
+}, 100)
+
+//Ortho - widget styling 41497
+#rebuy-widget-41497 .rebuy-color-label {
+    display: none;
+    }
+    
+    #rebuy-widget-41497 .rebuy-size-label {
+    border-radius: 5px;
+    }
+    #rebuy-widget-41497 .rebuy-button {
+    width: 64% !important;
+    }
+    #rebuy-widget-41497 .rebuy-size-input:checked+.rebuy-size-label {
+        background-color: #4C9685;
+        color: white;
+    }
+    #rebuy-widget-41497 .rebuy-size-label:hover{
+        background-color: #4C9685;
+        color: white;
+        transition: .5s;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+    }
+// Corliving
+setTimeout(() => {
+    document.addEventListener('rebuy:cart.change', function(event){
+        event.detail.cart.enrichCart();
+      });
+},100)
